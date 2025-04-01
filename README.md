@@ -22,7 +22,7 @@ Retro pixel art, (hopefully sound effects if there is time)
 ## Features
 
 ”Classic” Mario-style gameplay<br>
-Player movement:
+Player movement: <br>
 -jumping <br>
 -walking<br>
 -running<br>
