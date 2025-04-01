@@ -11,21 +11,21 @@ SamuelAmsih - Samuel Yousef <br>
  
 ## Implementation
 
-World map
-Main character
-Enemies
-Obstacles
-Animations
+World map <br>
+Main character <br>
+Enemies <br>
+Obstacles <br>
+Animations <br>
 Retro pixel art, (hopefully sound effects if there is time)
 
 
 ## Features
 
-”Classic” Mario-style gameplay
+”Classic” Mario-style gameplay<br>
 Player movement:
 -jumping <br>
--walking
--running
+-walking<br>
+-running<br>
 
 
 
