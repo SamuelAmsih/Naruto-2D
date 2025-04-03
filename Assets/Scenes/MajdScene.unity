@@ -212,7 +212,11 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &1294489357
+=======
+--- !u!1 &1496175345
+>>>>>>> Stashed changes
 =======
 --- !u!1 &1496175345
 >>>>>>> Stashed changes
@@ -224,9 +228,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - component: {fileID: 1294489360}
   - component: {fileID: 1294489359}
   - component: {fileID: 1294489358}
+=======
+  - component: {fileID: 1496175348}
+  - component: {fileID: 1496175347}
+  - component: {fileID: 1496175346}
+>>>>>>> Stashed changes
 =======
   - component: {fileID: 1496175348}
   - component: {fileID: 1496175347}
@@ -240,7 +250,11 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!95 &1294489358
+=======
+--- !u!95 &1496175346
+>>>>>>> Stashed changes
 =======
 --- !u!95 &1496175346
 >>>>>>> Stashed changes
@@ -251,7 +265,11 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1294489357}
+=======
+  m_GameObject: {fileID: 1496175345}
+>>>>>>> Stashed changes
 =======
   m_GameObject: {fileID: 1496175345}
 >>>>>>> Stashed changes
@@ -270,7 +288,11 @@ Animator:
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!212 &1294489359
+=======
+--- !u!212 &1496175347
+>>>>>>> Stashed changes
 =======
 --- !u!212 &1496175347
 >>>>>>> Stashed changes
@@ -280,7 +302,11 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1294489357}
+=======
+  m_GameObject: {fileID: 1496175345}
+>>>>>>> Stashed changes
 =======
   m_GameObject: {fileID: 1496175345}
 >>>>>>> Stashed changes
@@ -333,7 +359,11 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!4 &1294489360
+=======
+--- !u!4 &1496175348
+>>>>>>> Stashed changes
 =======
 --- !u!4 &1496175348
 >>>>>>> Stashed changes
@@ -343,15 +373,21 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1294489357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.1073308, y: -0.76624537, z: 0}
 =======
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 1496175345}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8992012, y: 0.46, z: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -364,7 +400,11 @@ SceneRoots:
   m_Roots:
   - {fileID: 1268676938}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 1294489360}
+=======
+  - {fileID: 1496175348}
+>>>>>>> Stashed changes
 =======
   - {fileID: 1496175348}
 >>>>>>> Stashed changes
