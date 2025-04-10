@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 8a5e1622a715ec64ba9dd5eec152ee42
+guid: 96d74cd047d14b8439f30b4773e6b64c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7127025511151221869
-    second: Naruto Idle_0
+      213: 3820311710500295318
+    second: Naruto_Run_0
   - first:
-      213: -1863399693208386810
-    second: Naruto Idle_1
+      213: 4414556329869354032
+    second: Naruto_Run_1
   - first:
-      213: -322890232862381875
-    second: Naruto Idle_2
+      213: 7117550279616748621
+    second: Naruto_Run_2
   - first:
-      213: -5917322570288173493
-    second: Naruto Idle_3
+      213: 4275701871729946762
+    second: Naruto_Run_3
   - first:
-      213: 2111855231582971917
-    second: Naruto Idle_4
+      213: 5415874696980432283
+    second: Naruto_Run_4
   - first:
-      213: -8582912809837533473
-    second: Naruto Idle_5
+      213: -125773249170841563
+    second: Naruto_Run_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +63,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -87,10 +87,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -128,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Naruto Idle_0
+      name: Naruto_Run_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 80
-        height: 107
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 68
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6cb05911f748e260800000000000000
-      internalID: 7127025511151221869
+      spriteID: 69292a38249740530800000000000000
+      internalID: 3820311710500295318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto Idle_1
+      name: Naruto_Run_1
       rect:
         serializedVersion: 2
-        x: 105
-        y: 0
-        width: 80
-        height: 107
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 72
+        y: 1
+        width: 68
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6030ebb0adfd326e0800000000000000
-      internalID: -1863399693208386810
+      spriteID: 034a0dab797a34d30800000000000000
+      internalID: 4414556329869354032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto Idle_2
+      name: Naruto_Run_2
       rect:
         serializedVersion: 2
-        x: 215
+        x: 144
         y: 0
-        width: 80
-        height: 107
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 55
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc86bc04b0dd48bf0800000000000000
-      internalID: -322890232862381875
+      spriteID: d4cd987d44e96c260800000000000000
+      internalID: 7117550279616748621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto Idle_3
+      name: Naruto_Run_3
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 80
-        height: 107
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 203
+        y: 1
+        width: 69
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4e6290497271eda0800000000000000
-      internalID: -5917322570288173493
+      spriteID: a80bfedd238565b30800000000000000
+      internalID: 4275701871729946762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto Idle_4
+      name: Naruto_Run_4
       rect:
         serializedVersion: 2
-        x: 423
+        x: 276
         y: 0
-        width: 80
-        height: 107
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 68
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d08ad8fd421de4d10800000000000000
-      internalID: 2111855231582971917
+      spriteID: b958b85a75d092b40800000000000000
+      internalID: 5415874696980432283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto Idle_5
+      name: Naruto_Run_5
       rect:
         serializedVersion: 2
-        x: 531
+        x: 348
         y: 0
-        width: 79
-        height: 107
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd6eb7f064e53e880800000000000000
-      internalID: -8582912809837533473
+      spriteID: 520ece075e9214ef0800000000000000
+      internalID: -125773249170841563
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ccf33f84f4740e1439622b15bb440e92
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -272,13 +272,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Naruto Idle_0: 7127025511151221869
-      Naruto Idle_1: -1863399693208386810
-      Naruto Idle_2: -322890232862381875
-      Naruto Idle_3: -5917322570288173493
-      Naruto Idle_4: 2111855231582971917
-      Naruto Idle_5: -8582912809837533473
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
