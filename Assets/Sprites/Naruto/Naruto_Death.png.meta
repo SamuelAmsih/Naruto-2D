@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 8c23d6c9063df824795d9dce4fba22ac
+guid: 0873df374e8907249b860c16de1a90c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6113488928661533278
-    second: Naruto_jump_0
+      213: 2455366088338920620
+    second: Naruto_Death_0
   - first:
-      213: -6033974489040843211
-    second: Naruto_jump_1
+      213: -4441604535275347869
+    second: Naruto_Death_1
   - first:
-      213: -3300017062888637115
-    second: Naruto_jump_2
+      213: 8433475746572086837
+    second: Naruto_Death_2
+  - first:
+      213: -722455618901566781
+    second: Naruto_Death_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +57,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -78,10 +81,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Naruto_jump_0
+      name: Naruto_Death_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 46
-        height: 59
+        y: 5
+        width: 67
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,42 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ad88d4c536882ba0800000000000000
-      internalID: -6113488928661533278
+      spriteID: ca45bf0c276331220800000000000000
+      internalID: 2455366088338920620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Naruto_jump_1
+      name: Naruto_Death_1
       rect:
         serializedVersion: 2
-        x: 55
-        y: 0
-        width: 53
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53e83fceb24034ca0800000000000000
-      internalID: -6033974489040843211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Naruto_jump_2
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 0
+        x: 74
+        y: 10
         width: 60
-        height: 77
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +159,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54d7bcd27fbf332d0800000000000000
-      internalID: -3300017062888637115
+      spriteID: 360262235304c52c0800000000000000
+      internalID: -4441604535275347869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Naruto_Death_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e2d405289b90570800000000000000
+      internalID: 8433475746572086837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Naruto_Death_3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 76
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ca136d317259f5f0800000000000000
+      internalID: -722455618901566781
       vertices: []
       indices: 
       edges: []
@@ -197,10 +222,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Naruto_jump_0: -6113488928661533278
-      Naruto_jump_1: -6033974489040843211
-      Naruto_jump_2: -3300017062888637115
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
