@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Naruto_Death_0: 2455366088338920620
+      Naruto_Death_1: -4441604535275347869
+      Naruto_Death_2: 8433475746572086837
+      Naruto_Death_3: -722455618901566781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
