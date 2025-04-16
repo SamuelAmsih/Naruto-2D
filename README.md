@@ -24,7 +24,7 @@ Retro pixel art, (hopefully sound effects if there is time)
 ”Classic” Mario-style gameplay<br>
 Player movement: <br>
 -jumping <br>
--walking<br>
+-idlestance <br>
 -running<br>
 
 
