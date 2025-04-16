@@ -42,6 +42,24 @@ Unity
 
 https://github.com/users/SamuelAmsih/projects/2/views/1?system_template=kanban
 
+## Instructions to run project locally
+
+ 1. Clone this repository or download the source files to your local machine. <br>
+
+ 2. Open in Unity and select the downloaded project. <br>
+
+ 3. Install requied packages (optional). <br>
+
+ 4. Build the Project <br>
+
+   In the Unity Editor, open File > Build Settings. <br>
+
+   Select your target platform (e.g., PC, Mac, Linux). <br>
+
+   Click Build or Build and Run to create/launch the game. <br>
+
+5. Run the project by pressing play <br>
+
 ## Unit tests in Unity
 
 1. Open the Unity menu: Window > General > Test Runner (in some older versions, it’s Window > Test Runner) <br>
@@ -70,20 +88,22 @@ PlayMode Tests: Run in a simulated play session. <br>
 
 ## Run linter in Unity
 
-Unity doesn’t include a built-in C#. However, you can use external tools and we will use VS Code. We will stick to C# extension StyleCop
+Unity doesn’t include a built-in C# linter. However, Roslyn Analyzers let you enforce coding conventions and catch issues in your .NET/C# projects. In VS Code, you can install and configure these analyzers to get warnings and suggestions in real-time.
 
-1. Install StyleCop <br>
+1. Add Roslyn Analyzers <br>
   
-Open VS Code and go to the Extensions panel. <br>
+Typically, you would add them as NuGet packages in your .csproj file—for example, if you want a specific analyzer package (e.g., Microsoft.CodeAnalysis.FxCopAnalyzers or other community analyzers). <br>
 
-Install the C# extension (if you haven’t already). <br>
+However, Unity automatically generates and regenerates .csproj files, which can overwrite manual changes. <br>
 
-If you want stricter style checks or guidelines, you can install StyleCop.Analyzers <br>
+- One approach is to keep your analyzers in a separate solution or use a package manager approach that Unity supports (like embedding them in your project as part of a custom package). <br>
+
+- Another approach is to use an .editorconfig file to configure rules. Some analyzers are built into the .NET compiler and can be configured at the editor level.
   
-2. How linting works in VS Code <br>
+2. Using Roslyn Analyzers in VS Code <br>
 
-With the C# extension and StyleCop/analyzers installed, open any C# file. <br>
+Open any C# file in your Unity project via VS Code. <br>
 
-You’ll see linting errors or warnings in the Problems panel in VS Code, or as underlines in the editor. <br>
+As you code, watch for squiggly underlines or messages in the Problems panel. These come from Roslyn-based analyzers. <br>
 
-Hover over the underline to see the rule or suggestion (for example, naming conventions, spacing, missing XML comments, etc.). <br>
+Hover over each warning or suggestion for more info and potential quick fixes. <br>
