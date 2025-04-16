@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 9040537414537851877}
   m_Layer: 0
   m_Name: NarutoMain
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba88b0076c8340149cdb05460cd0315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 8
 --- !u!1 &7249109355962557097
 GameObject:
   m_ObjectHideFlags: 0
