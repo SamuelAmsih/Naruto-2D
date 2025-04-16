@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3315154791384689009}
   - component: {fileID: 4776327243484133406}
   m_Layer: 0
-  m_Name: itemScroll
+  m_Name: ScrollCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
