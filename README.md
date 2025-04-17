@@ -44,7 +44,8 @@ https://github.com/users/SamuelAmsih/projects/2/views/1?system_template=kanban <
 
 
 
-## Instructions to run project locally
+## Instructions to run the project locally
+
 
  1. Clone this repository or download the source files to your local machine. <br>
 
