@@ -1101,6 +1101,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4172061487278827773, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172061487278827773, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.51
+      objectReference: {fileID: 0}
     - target: {fileID: 4581520568336205341, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
       propertyPath: m_Name
       value: NarutoMain
