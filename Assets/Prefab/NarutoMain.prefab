@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6833893055121900385}
   - component: {fileID: 5448459492593546542}
+  - component: {fileID: 74900043244857601}
+  - component: {fileID: 3314656033902836237}
   m_Layer: 3
   m_Name: Kuyobi
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4443711331815193548}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.596, y: 0.493, z: 0}
+  m_LocalPosition: {x: -0.44, y: 0.58, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39,7 +41,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4443711331815193548}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -87,6 +89,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &74900043244857601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443711331815193548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489d5c913d315499fb8e798ca5d56e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdleFrames:
+  - {fileID: -1420256901096998040, guid: aa7eef1ee1e594fe08e4b240bc88b2dc, type: 3}
+  IdleFps: 1
+  RunFrames:
+  - {fileID: 8815195490453937080, guid: 5621629bd200d4714bfd78e2c9beb76e, type: 3}
+  - {fileID: 6624304071437449784, guid: 70b5d1b23c20241658a50b68317774c5, type: 3}
+  - {fileID: -7868319451618232489, guid: 5280b926a54c6478594814d52714c648, type: 3}
+  - {fileID: 324017837584558801, guid: 27eea2e6d47ca435d841e572ebc8364c, type: 3}
+  - {fileID: -7444382815865144535, guid: 6ad542050c7864ec0abcef3e927285a2, type: 3}
+  - {fileID: 4540451949022931499, guid: 0eb255372e0654e179ef14cc4ee62a3b, type: 3}
+  RunFps: 10
+  JumpFrames:
+  - {fileID: 847684918645523156, guid: d8ce1fef231d449acae17b8a7eb82720, type: 3}
+  - {fileID: -7444382815865144535, guid: 6ad542050c7864ec0abcef3e927285a2, type: 3}
+  JumpFps: 4
+--- !u!114 &3314656033902836237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443711331815193548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db401c826020745108c3d58ca32a8e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4581520568336205341
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,16 +180,16 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e0dc92939b2f8420ba4f083bff529cf3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &4172061487278827773
 CapsuleCollider2D:
@@ -160,7 +201,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e0dc92939b2f8420ba4f083bff529cf3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -184,7 +225,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.5, y: 0.5}
+  m_Offset: {x: -0.5, y: 0.51}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
 --- !u!114 &9040537414537851877
@@ -212,6 +253,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5506698722701275232}
   - component: {fileID: 3967131349975545363}
+  - component: {fileID: 7746561830279732047}
+  - component: {fileID: 4785551562314476784}
   m_Layer: 3
   m_Name: Naruto
   m_TagString: Untagged
@@ -228,7 +271,7 @@ Transform:
   m_GameObject: {fileID: 7249109355962557097}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.531, y: 0.465, z: 0}
+  m_LocalPosition: {x: -0.47, y: 0.58, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -289,3 +332,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7746561830279732047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7249109355962557097}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489d5c913d315499fb8e798ca5d56e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdleFrames:
+  - {fileID: 21300000, guid: 5cfb6ae4bc8054058b063754879649c3, type: 3}
+  - {fileID: 21300000, guid: d1fca3268fc07476698d20e56fc4081a, type: 3}
+  - {fileID: 21300000, guid: 93f6106a85e4d4e3a8e7b21a56516d64, type: 3}
+  - {fileID: 21300000, guid: 91a27cdd98e904d5a9d3fcc0cc796a32, type: 3}
+  - {fileID: 21300000, guid: 532125004a4ff4bb8af7249941c13de5, type: 3}
+  - {fileID: 21300000, guid: 4d304faea451c4278bf106c5940281e7, type: 3}
+  - {fileID: 21300000, guid: 5cfb6ae4bc8054058b063754879649c3, type: 3}
+  IdleFps: 4
+  RunFrames:
+  - {fileID: 1380614546134671771, guid: 4290be204071c4f39b7b9bededded704, type: 3}
+  - {fileID: -7683728373595443933, guid: 52dc92e7febd54a078ef3046a95d3fac, type: 3}
+  - {fileID: 2015781034314652990, guid: 4a9580dcb53c7463bb01f99e6a15ac12, type: 3}
+  - {fileID: 2792781328842556156, guid: ceb74035932fd41ccb9c3b15dddfc67a, type: 3}
+  - {fileID: 2631684450310441164, guid: 6fbefa455928147babc7ebe5d14104f5, type: 3}
+  - {fileID: -3332569268298744291, guid: bcdedb42fd8ea49999d99db22ffb7853, type: 3}
+  RunFps: 10
+  JumpFrames:
+  - {fileID: -3089060716620396591, guid: 9b3ffb13564bd46a4a20e617566afebc, type: 3}
+  - {fileID: -6398148325348464729, guid: 4f04874058eb04e079a2eb19adfe1ad0, type: 3}
+  - {fileID: -7868867820781590053, guid: 5fe862d27ad084d7bb167b34423272df, type: 3}
+  JumpFps: 3
+--- !u!114 &4785551562314476784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7249109355962557097}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db401c826020745108c3d58ca32a8e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
