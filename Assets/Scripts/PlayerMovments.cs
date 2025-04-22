@@ -17,6 +17,7 @@ public class PlayerMovments : MonoBehaviour
     
     public bool Grounded { get; private set; }
     public bool Jumping { get; private set; }
+    public bool Running => Mathf.Abs(velocity.x) > 0.25f || Mathf.Abs(inputAxis) > 0.25f;
     
     private void Awake()
     {
@@ -45,6 +46,20 @@ public class PlayerMovments : MonoBehaviour
     {
             inputAxis = Input.GetAxis("Horizontal");
             velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * MovementSpeed, MovementSpeed * Time.deltaTime);
+
+            /*if (rigidbody.Raycast(Vector2.right * velocity.x)) 
+            {
+                velocity.x = 0f;
+            } for collision with objects in x-axis, not working properly*/
+
+            //animation rotation
+            if  (velocity.x > 0f){
+                transform.eulerAngles = Vector3.zero;
+            } else if (velocity.x < 0f){
+                transform.eulerAngles = new Vector3(0f, 180f, 0f);
+            }
+
+        
     }
 
     private void GroundedMovement()
