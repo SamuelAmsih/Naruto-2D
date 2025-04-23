@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 52dc92e7febd54a078ef3046a95d3fac
+guid: 06f93177f6d3aaa4f87ec783b16cba78
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7683728373595443933
-    second: NarutoRun_2_0
+      213: -6247798714153035370
+    second: NinjaEnemyWalk1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NarutoRun_2_0
+      name: NinjaEnemyWalk1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 66
-        height: 54
+        x: 5
+        y: 8
+        width: 34
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32de04d11c9ed5590800000000000000
-      internalID: -7683728373595443933
+      spriteID: 69914c6fb2c5b49a0800000000000000
+      internalID: -6247798714153035370
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      NarutoRun_2_0: -7683728373595443933
+      NinjaEnemyWalk1_0: -6247798714153035370
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
