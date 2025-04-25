@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NarutoRun_3_0: 2015781034314652990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NarutoJump_1_0: -3089060716620396591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
