@@ -1,5 +1,5 @@
 # Build Status
-[![Unity CI](https://github.com/SamuelAmsih/Naruto-2D/actions/workflows/Build.yml/badge.svg)
+![Unity CI](https://github.com/SamuelAmsih/Naruto-2D/actions/workflows/Build.yml/badge.svg)
 
 # Game-development-2D
 
