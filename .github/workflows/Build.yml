@@ -18,7 +18,7 @@ jobs:
           lfs: true
 
       - name: Cache Unity packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: Library
           key: Library-Tests
@@ -33,7 +33,7 @@ jobs:
           artifactsPath: TestResults
 
       - name: Upload Test Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: TestResults
           path: TestResults
@@ -55,7 +55,7 @@ jobs:
           fetch-depth: 0
           lfs: true
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: Library
           key: Library-${{ matrix.targetPlatform }}
@@ -69,7 +69,7 @@ jobs:
           buildPath: build/${{ matrix.targetPlatform }}
 
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
