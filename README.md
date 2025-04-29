@@ -1,6 +1,6 @@
 # Game-development-2D
 
-![Unity CI](https://github.com/SamuelAmsih/Naruto-2D/actions/workflows/ci.yml/badge.svg)
+Unity CI (https://github.com/SamuelAmsih/Naruto-2D/actions/workflows/ci.yml/badge.svg)
 
 
 
