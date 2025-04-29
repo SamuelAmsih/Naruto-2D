@@ -1,0 +1,35 @@
+name: Unity CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and Test Unity Project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Cache Unity packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/unity
+          key: ${{ runner.os }}-unity-${{ hashFiles('**/Packages/manifest.json') }}
+
+      - name: Run Unity Tests
+        uses: game-ci/unity-test-runner@v4
+        with:
+          projectPath: .
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        with:
+          projectPath: .
+          unityVersion: 6000.0.44f1
+          targetPlatform: StandaloneWindows64
