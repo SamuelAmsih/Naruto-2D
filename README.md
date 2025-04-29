@@ -1,4 +1,4 @@
-https://github.com/SamuelAmsih/Naruto-2D/actions/workflows/Build.yml/badge.svg
+!https://github.com/SamuelAmsih/Naruto-2D/actions/workflows/Build.yml/badge.svg
 
 # Game-development-2D
 
