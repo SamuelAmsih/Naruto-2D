@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 4172061487278827773}
   - component: {fileID: 9040537414537851877}
   - component: {fileID: -7049900348635795573}
+  - component: {fileID: 3884130640655156293}
   m_Layer: 3
   m_Name: NarutoMain
   m_TagString: Player
@@ -258,6 +259,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3967131349975545363}
   deadSprite: {fileID: 2455366088338920620, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
+--- !u!114 &3884130640655156293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581520568336205341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5e8e213f06f314a845294aca2f1118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallRenderer: {fileID: 7746561830279732047}
+  bigRenderer: {fileID: 74900043244857601}
+  deathAnimation: {fileID: 0}
 --- !u!1 &7249109355962557097
 GameObject:
   m_ObjectHideFlags: 0

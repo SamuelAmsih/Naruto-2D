@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NinjaEnemyDeath_0: -6536655600267458915
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
