@@ -14,9 +14,11 @@ public class PlayerSpriteRenderer : MonoBehaviour
 
     public Sprite[] JumpFrames;
     public float   JumpFps = 4f;
+    public Sprite[] DeadFrames;        
+    public float   DeadFps = 5f;
 
     // intern state-tracker 
-    private enum State { Idle, Run, Jump }
+    private enum State { Idle, Run, Jump, Dead}
     private State currentState;
 
     private void Awake()
@@ -35,6 +37,12 @@ public class PlayerSpriteRenderer : MonoBehaviour
 
     private void LateUpdate()
     {
+        // om spelaren är död 
+        if (currentState == State.Dead) 
+        {
+            return;
+        }
+
         //  avgör ny state
         State newState = mov.Jumping
             ? State.Jump
@@ -57,7 +65,16 @@ public class PlayerSpriteRenderer : MonoBehaviour
                 case State.Jump:
                     anim.PlayAnimation(JumpFrames, JumpFps);
                     break;
+                case State.Dead:
+                    anim.PlayAnimation(DeadFrames, DeadFps);
+                    break;
+                
             }
-        }
+        }        
+    }
+    public void PlayDeathAnimation()
+    {
+        currentState = State.Dead;
+        anim.PlayAnimation(DeadFrames, DeadFps);
     }
 }

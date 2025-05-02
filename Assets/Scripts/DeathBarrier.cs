@@ -1,4 +1,3 @@
-using GluonGui.WorkspaceWindow.Views.WorkspaceExplorer.Search;
 using UnityEngine;
 
 public class DeathhBarrier : MonoBehaviour
@@ -8,7 +7,7 @@ public class DeathhBarrier : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.gameObject.SetActive(false);
-            GameManager.Instance.ResetLevel(5f);
+            GameManager.Instance.ResetLevel(3f);
         } else {
             Destroy(other.gameObject);
         }

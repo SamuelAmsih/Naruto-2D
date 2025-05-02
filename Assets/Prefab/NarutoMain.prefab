@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5448459492593546542}
   - component: {fileID: 74900043244857601}
   - component: {fileID: 3314656033902836237}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Kuyobi
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,10 +139,10 @@ GameObject:
   - component: {fileID: 2281716853481756406}
   - component: {fileID: 4099920280997760362}
   - component: {fileID: 4172061487278827773}
+  - component: {fileID: 3884130640655156293}
   - component: {fileID: 9040537414537851877}
   - component: {fileID: -7049900348635795573}
-  - component: {fileID: 3884130640655156293}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: NarutoMain
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -227,9 +227,23 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.5, y: 0.51}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: -0.5, y: 0.6}
+  m_Size: {x: 1, y: 1.05}
   m_Direction: 0
+--- !u!114 &3884130640655156293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581520568336205341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5e8e213f06f314a845294aca2f1118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallRenderer: {fileID: 7746561830279732047}
+  bigRenderer: {fileID: 74900043244857601}
 --- !u!114 &9040537414537851877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,21 +273,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3967131349975545363}
   deadSprite: {fileID: 2455366088338920620, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
---- !u!114 &3884130640655156293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4581520568336205341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b5e8e213f06f314a845294aca2f1118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smallRenderer: {fileID: 7746561830279732047}
-  bigRenderer: {fileID: 74900043244857601}
-  deathAnimation: {fileID: 0}
 --- !u!1 &7249109355962557097
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,9 +285,9 @@ GameObject:
   - component: {fileID: 3967131349975545363}
   - component: {fileID: 7746561830279732047}
   - component: {fileID: 4785551562314476784}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Naruto
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -370,7 +369,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7249109355962557097}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 489d5c913d315499fb8e798ca5d56e2b, type: 3}
   m_Name: 
@@ -404,7 +403,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7249109355962557097}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db401c826020745108c3d58ca32a8e8f, type: 3}
   m_Name: 

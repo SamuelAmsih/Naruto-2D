@@ -75,7 +75,5 @@ public class DeathAnimation : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-
     }
-
 }
