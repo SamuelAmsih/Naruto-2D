@@ -6,13 +6,13 @@ public class GameManager : MonoBehaviour
     // singelton instance
     public static GameManager Instance {get; private set; }
 
-    public int world {get; private set; } 
-    public int stage {get; private set; }
-    public int lives {get; private set; }
+    public int World {get; private set; } 
+    public int Stage {get; private set; }
+    public int Lives {get; private set; }
     private void Awake()
     {
         // Check if instance already exists
-        if (Instance == null)
+        if (Instance != null)
         {
             DestroyImmediate(gameObject); // Destroy this object if it is not the first instance
         } else {
@@ -37,22 +37,22 @@ public class GameManager : MonoBehaviour
 
     private void NewGame()
     {
-        lives = 2;
+        Lives = 5;
 
         LoadLevel(1, 1);
     }
 
     private void LoadLevel(int world, int stage)
     {
-        this.world = world;
-        this.stage = stage;
+        this.World = world;
+        this.Stage = stage;
 
         SceneManager.LoadScene($"{world}-{stage}");
     }
 
     public void NextLevel()
     {
-        LoadLevel(world, stage + 1);
+        LoadLevel(World, Stage + 1);
     }
 
     public void ResetLevel(float delay)
@@ -62,10 +62,10 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        lives--;
+        Lives--;
 
-        if (lives > 0) {
-            LoadLevel(world, stage);
+        if (Lives > 0) {
+            LoadLevel(World, Stage);
         } else {
             GameOver();
         }
@@ -73,8 +73,6 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
-        SceneManager.LoadScene("Game Over");
-
-        Invoke(nameof(NewGame), 5f);
+        NewGame();
     }
 }
