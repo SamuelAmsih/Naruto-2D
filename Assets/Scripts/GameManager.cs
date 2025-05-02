@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public int World {get; private set; } 
     public int Stage {get; private set; }
     public int Lives {get; private set; }
+    public int Scrolls {get; private set; }
+
     private void Awake()
     {
         // Check if instance already exists
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
     private void NewGame()
     {
         Lives = 5;
+        Scrolls = 0;
 
         LoadLevel(1, 1);
     }
@@ -74,5 +77,23 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         NewGame();
+    }
+
+    public void AddScroll()
+    {
+
+      Scrolls++;
+      
+      if (Scrolls == 25)
+      {
+         AddLife();
+         Scrolls = 0;
+      }
+
+    }
+
+    public void AddLife()
+    {
+        Lives++;
     }
 }
