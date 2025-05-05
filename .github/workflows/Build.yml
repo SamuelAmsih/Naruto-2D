@@ -1,25 +1,19 @@
-name: Build and Release Project
+name: Build project
 
-on:
-  push:
-    tags:
-      - 'v*'  # Trigger only on version tags like v0.1.0
-  pull_request:
-  push:
+on: [push, pull_request]
 
 jobs:
-  build:
+  buildForAllSupportedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         targetPlatform:
-          - StandaloneOSX
-          - StandaloneWindows
-          - StandaloneWindows64
-          - StandaloneLinux64
-
+          - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
+          - StandaloneWindows # Build a Windows standalone.
+          - StandaloneWindows64 # Build a Windows 64-bit standalone.
+          - StandaloneLinux64 # Build a Linux 64-bit standalone.
     steps:
       - uses: actions/checkout@v4
         with:
@@ -46,7 +40,7 @@ jobs:
 
   release:
     if: startsWith(github.ref, 'refs/tags/v')
-    needs: build
+    needs: buildForAllSupportedPlatforms
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
