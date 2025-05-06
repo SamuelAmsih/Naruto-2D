@@ -1,10 +1,10 @@
-
-using Codice.Client.Common.GameUI;
 using UnityEngine;
 using System.Collections;
+using Codice.Client.Common.GameUI;
 
 public class Player : MonoBehaviour
 {
+    [Header("Referenser till sprite-renders")]
     public PlayerSpriteRenderer smallRenderer;
     public PlayerSpriteRenderer bigRenderer;
     private PlayerSpriteRenderer activeRenderer;
@@ -12,16 +12,21 @@ public class Player : MonoBehaviour
     private DeathAnimation deathAnimation;
     private CapsuleCollider2D capsuleCollider;
 
+   
     public bool Big   => bigRenderer != null && bigRenderer.Visible;
     public bool Small => smallRenderer != null && smallRenderer.Visible;
     public bool Dead  => deathAnimation != null && deathAnimation.enabled;
 
     private void Awake()
     {
+       
         deathAnimation  = GetComponent<DeathAnimation>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+    }
 
-        // Initial state: Naruto (small) synlig, Kyobi (big) gömd
+    private void Start()
+    {
+        
         smallRenderer.Show();
         bigRenderer.Hide();
         activeRenderer = smallRenderer;
@@ -47,13 +52,9 @@ public class Player : MonoBehaviour
         Debug.Log("Player.Death() called");
 
         if (Small)
-        {
             smallRenderer.PlayDeathAnimation();
-        }
         else if (Big)
-        {
             bigRenderer.PlayDeathAnimation();
-        }
 
         StartCoroutine(DelayedDeathSequence());
     }
@@ -74,12 +75,11 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Player.Grow() called");
 
-        // Byt till Kyobi
         smallRenderer.Hide();
         bigRenderer.Show();
         activeRenderer = bigRenderer;
 
-        // Uppdatera collider för "big"
+     
         capsuleCollider.size   = new Vector2(1f, 2f);
         capsuleCollider.offset = new Vector2(0f, 1f);
 
@@ -90,13 +90,12 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Player.Shrink() called");
 
-        // Byt till Naruto
         smallRenderer.Show();
         bigRenderer.Hide();
         activeRenderer = smallRenderer;
 
-        // Uppdatera collider för "small"
-        capsuleCollider.size   = new Vector2(0.5f, 0.5f);
+        // Uppdatera collider för liten form
+        capsuleCollider.size   = new Vector2(1f, 1f);
         capsuleCollider.offset = new Vector2(0f, 0f);
 
         StartCoroutine(ScaleAnimation());
@@ -113,7 +112,7 @@ public class Player : MonoBehaviour
 
             if (Time.frameCount % 4 == 0)
             {
-                // Växla synlighet för en blinkande effekt
+                // Blinkande effekt genom att växla synlighet
                 smallRenderer.Toggle();
                 bigRenderer.Toggle();
             }

@@ -1,6 +1,7 @@
-
+// PlayerSpriteRenderer.cs
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerSpriteRenderer : MonoBehaviour
 {
     private AnimatedSprite anim;
@@ -21,13 +22,18 @@ public class PlayerSpriteRenderer : MonoBehaviour
 
     private void Awake()
     {
+       
         anim       = GetComponent<AnimatedSprite>();
         mov        = GetComponentInParent<PlayerMovments>();
         spriteRend = GetComponent<SpriteRenderer>();
+
+        if (spriteRend == null)
+            Debug.LogError($"[{name}] Kunde inte hitta SpriteRenderer-komponenten!");
     }
 
     private void Start()
     {
+       
         currentState = State.Idle;
         anim.PlayAnimation(IdleFrames, IdleFps);
     }
@@ -36,6 +42,7 @@ public class PlayerSpriteRenderer : MonoBehaviour
     {
         if (currentState == State.Dead) return;
 
+      
         State newState = mov.Jumping
             ? State.Jump
             : mov.Running
@@ -69,8 +76,17 @@ public class PlayerSpriteRenderer : MonoBehaviour
         anim.PlayAnimation(DeadFrames, DeadFps);
     }
 
-    // Metoder för att dölja/visa spriten
-    public void Show()  => spriteRend.enabled = true;
+  
+    public void Show()
+    {
+     
+        if (spriteRend == null)
+            spriteRend = GetComponent<SpriteRenderer>();
+
+        if (spriteRend != null)
+            spriteRend.enabled = true;
+    }
+
     public void Hide()  => spriteRend.enabled = false;
     public void Toggle() => spriteRend.enabled = !spriteRend.enabled;
     public bool Visible => spriteRend.enabled;
