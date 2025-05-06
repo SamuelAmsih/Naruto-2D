@@ -116,6 +116,8 @@ MonoBehaviour:
   - {fileID: 847684918645523156, guid: d8ce1fef231d449acae17b8a7eb82720, type: 3}
   - {fileID: -7444382815865144535, guid: 6ad542050c7864ec0abcef3e927285a2, type: 3}
   JumpFps: 4
+  DeadFrames: []
+  DeadFps: 5
 --- !u!114 &3314656033902836237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3967131349975545363}
-  deadSprite: {fileID: 2455366088338920620, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
+  deadSprite: {fileID: 8433475746572086837, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
 --- !u!1 &7249109355962557097
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +398,11 @@ MonoBehaviour:
   - {fileID: -6398148325348464729, guid: 4f04874058eb04e079a2eb19adfe1ad0, type: 3}
   - {fileID: -7868867820781590053, guid: 5fe862d27ad084d7bb167b34423272df, type: 3}
   JumpFps: 3
+  DeadFrames:
+  - {fileID: 2455366088338920620, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
+  - {fileID: -4441604535275347869, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
+  - {fileID: 8433475746572086837, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
+  DeadFps: 1
 --- !u!114 &4785551562314476784
 MonoBehaviour:
   m_ObjectHideFlags: 0

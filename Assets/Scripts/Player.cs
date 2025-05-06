@@ -1,80 +1,128 @@
+using UnityEngine;
 using System.Collections;
 using Codice.Client.Common.GameUI;
-using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Referenser till sprite-renders")]
     public PlayerSpriteRenderer smallRenderer;
     public PlayerSpriteRenderer bigRenderer;
-
+    private PlayerSpriteRenderer activeRenderer;
 
     private DeathAnimation deathAnimation;
+    private CapsuleCollider2D capsuleCollider;
 
-    public bool Big => bigRenderer.enabled;
-    public bool Small => smallRenderer.enabled;
-    public bool Dead => deathAnimation.enabled;
-    
-    public void Awake()
+   
+    public bool Big   => bigRenderer != null && bigRenderer.Visible;
+    public bool Small => smallRenderer != null && smallRenderer.Visible;
+    public bool Dead  => deathAnimation != null && deathAnimation.enabled;
+
+    private void Awake()
     {
-        deathAnimation = GetComponent<DeathAnimation>();
+       
+        deathAnimation  = GetComponent<DeathAnimation>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+    }
 
-        smallRenderer.enabled = true;
-        bigRenderer.enabled = false;
+    private void Start()
+    {
+        
+        smallRenderer.Show();
+        bigRenderer.Hide();
+        activeRenderer = smallRenderer;
     }
 
     public void Hit()
     {
         Debug.Log("Player.Hit() called");
-        if (Big) {
+        if (Big)
+        {
             Debug.Log("Player is Big, shrinking");
             Shrink();
-        } else {
+        }
+        else
+        {
             Debug.Log("Player is Small, dying");
             Death();
         }
     }
 
-    private void Shrink()
-    {
-        // todo
-    }
-
-private void Death()
+    private void Death()
     {
         Debug.Log("Player.Death() called");
-        
-        // First play death animation if available
-        if (smallRenderer.enabled && smallRenderer.gameObject.activeSelf)
-        {
-            Debug.Log("Playing small renderer death animation");
+
+        if (Small)
             smallRenderer.PlayDeathAnimation();
-        }
-        else if (bigRenderer.enabled && bigRenderer.gameObject.activeSelf)
-        {
-            Debug.Log("Playing big renderer death animation");
+        else if (Big)
             bigRenderer.PlayDeathAnimation();
-        }
-        
-        // Start the death sequence coroutine
+
         StartCoroutine(DelayedDeathSequence());
     }
-    
+
     private IEnumerator DelayedDeathSequence()
     {
-        // Wait for death animation to play a bit
         yield return new WaitForSeconds(0.5f);
-        
-        Debug.Log("Delayed death sequence running");
-        
-        // Now disable renderers and enable death animation
-        smallRenderer.enabled = false;
-        bigRenderer.enabled = false;
+
+        // Dölj båda och aktivera DeathAnimation
+        smallRenderer.Hide();
+        bigRenderer.Hide();
         deathAnimation.enabled = true;
-        
-        Debug.Log("Death animation enabled: " + deathAnimation.enabled);
-        
-        // Reset the level after a delay
+
         GameManager.Instance.ResetLevel(3f);
-        Debug.Log("Reset level called");
+    }
+
+    public void Grow()
+    {
+        Debug.Log("Player.Grow() called");
+
+        smallRenderer.Hide();
+        bigRenderer.Show();
+        activeRenderer = bigRenderer;
+
+     
+        capsuleCollider.size   = new Vector2(1f, 2f);
+        capsuleCollider.offset = new Vector2(0f, 1f);
+
+        StartCoroutine(ScaleAnimation());
+    }
+
+    private void Shrink()
+    {
+        Debug.Log("Player.Shrink() called");
+
+        smallRenderer.Show();
+        bigRenderer.Hide();
+        activeRenderer = smallRenderer;
+
+        // Uppdatera collider för liten form
+        capsuleCollider.size   = new Vector2(1f, 1f);
+        capsuleCollider.offset = new Vector2(0f, 0f);
+
+        StartCoroutine(ScaleAnimation());
+    }
+
+    private IEnumerator ScaleAnimation()
+    {
+        float elapsed = 0f;
+        float duration = 0.5f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+
+            if (Time.frameCount % 4 == 0)
+            {
+                // Blinkande effekt genom att växla synlighet
+                smallRenderer.Toggle();
+                bigRenderer.Toggle();
+            }
+
+            yield return null;
+        }
+
+        // I slutet ställer vi in rätt state
+        smallRenderer.Hide();
+        bigRenderer.Hide();
+        activeRenderer.Show();
     }
 }
