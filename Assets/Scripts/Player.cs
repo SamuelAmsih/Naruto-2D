@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
 
         // Uppdatera collider för liten form
         capsuleCollider.size   = new Vector2(1f, 1f);
-        capsuleCollider.offset = new Vector2(0f, 0f);
+        capsuleCollider.offset = new Vector2(-0.5f, 0.6f);
 
         StartCoroutine(ScaleAnimation());
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5448459492593546542}
   - component: {fileID: 74900043244857601}
   - component: {fileID: 3314656033902836237}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Kuyobi
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 3884130640655156293}
   - component: {fileID: 9040537414537851877}
   - component: {fileID: -7049900348635795573}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NarutoMain
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 3967131349975545363}
   - component: {fileID: 7746561830279732047}
   - component: {fileID: 4785551562314476784}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Naruto
   m_TagString: Player
   m_Icon: {fileID: 0}
