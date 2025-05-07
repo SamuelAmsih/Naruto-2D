@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7053005159981062536}
   - component: {fileID: 6444114168062532984}
   - component: {fileID: 1943709857117557514}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ninja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
