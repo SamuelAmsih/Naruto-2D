@@ -1,3 +1,4 @@
+using log4net.Util;
 using UnityEngine;
 
 public class PlayerMovments : MonoBehaviour
@@ -41,6 +42,9 @@ public class PlayerMovments : MonoBehaviour
         
     }
 
+    public UnityEngine.Transform kuyobi;
+
+    public UnityEngine.Transform naruto;
     //handleing X-axis movements
     private void HorizontalMovement()
     {
@@ -51,12 +55,15 @@ public class PlayerMovments : MonoBehaviour
             {
                 velocity.x = 0f;
             } for collision with objects in x-axis, not working properly*/
-
             //animation rotation
             if  (velocity.x > 0f){
-                transform.eulerAngles = Vector3.zero;
+                naruto.eulerAngles = Vector3.zero;
+                                kuyobi.eulerAngles = Vector3.zero;
+
             } else if (velocity.x < 0f){
-                transform.eulerAngles = new Vector3(0f, 180f, 0f);
+                naruto.eulerAngles = new Vector3(-1f, 180f, 0f);
+                kuyobi.eulerAngles = new Vector3(-1f, 180f, 0f);
+
             }
 
         

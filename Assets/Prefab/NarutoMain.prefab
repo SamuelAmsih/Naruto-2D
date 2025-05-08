@@ -261,6 +261,8 @@ MonoBehaviour:
   MovementSpeed: 8
   MaxJumpHeight: 5
   MaxJumpTime: 1
+  kuyobi: {fileID: 6833893055121900385}
+  naruto: {fileID: 5506698722701275232}
 --- !u!114 &-7049900348635795573
 MonoBehaviour:
   m_ObjectHideFlags: 0

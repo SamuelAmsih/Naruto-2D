@@ -371,10 +371,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1201064512}
     m_Modifications:
-    - target: {fileID: -7049900348635795573, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
-      propertyPath: deadSprite
-      value: 
-      objectReference: {fileID: 8433475746572086837, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
     - target: {fileID: 2281716853481756406, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -76.74739
@@ -419,34 +415,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NarutoMain
       objectReference: {fileID: 0}
-    - target: {fileID: 7746561830279732047, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
-      propertyPath: DeadFps
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7746561830279732047, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
-      propertyPath: DeadFrames.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7746561830279732047, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
-      propertyPath: 'DeadFrames.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2455366088338920620, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
-    - target: {fileID: 7746561830279732047, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
-      propertyPath: 'DeadFrames.Array.data[1]'
-      value: 
-      objectReference: {fileID: -4441604535275347869, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
-    - target: {fileID: 7746561830279732047, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
-      propertyPath: 'DeadFrames.Array.data[2]'
-      value: 
-      objectReference: {fileID: 8433475746572086837, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
-    - target: {fileID: 7746561830279732047, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
-      propertyPath: 'DeadFrames.Array.data[3]'
-      value: 
-      objectReference: {fileID: 8433475746572086837, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
-    - target: {fileID: 7746561830279732047, guid: 00e738501cec94e55ac4ace2ede8afcd, type: 3}
-      propertyPath: 'DeadFrames.Array.data[4]'
-      value: 
-      objectReference: {fileID: 8433475746572086837, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
