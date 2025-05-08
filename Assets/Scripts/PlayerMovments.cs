@@ -58,11 +58,11 @@ public class PlayerMovments : MonoBehaviour
             //animation rotation
             if  (velocity.x > 0f){
                 naruto.eulerAngles = Vector3.zero;
-                                kuyobi.eulerAngles = Vector3.zero;
+                kuyobi.eulerAngles = Vector3.zero;
 
             } else if (velocity.x < 0f){
-                naruto.eulerAngles = new Vector3(-1f, 180f, 0f);
-                kuyobi.eulerAngles = new Vector3(-1f, 180f, 0f);
+                naruto.eulerAngles = new Vector3(0f, 180f, 0f);
+                kuyobi.eulerAngles = new Vector3(0f, 180f, 0f);
 
             }
 
