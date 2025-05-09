@@ -27,6 +27,14 @@ jobs:
           key: Library-Test
           restore-keys: Library-
 
+      - name: Restore Unity Packages
+        run: |
+          unity -quit -batchmode -projectPath . -executeMethod UnityEditor.PackageManager.Client.Resolve
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+
       - name: Run Unity Tests
         uses: game-ci/unity-test-runner@v4
         env:
