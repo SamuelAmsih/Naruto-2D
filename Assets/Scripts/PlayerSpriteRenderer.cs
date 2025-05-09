@@ -1,4 +1,5 @@
 // PlayerSpriteRenderer.cs
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -16,8 +17,10 @@ public class PlayerSpriteRenderer : MonoBehaviour
     public float   JumpFps = 4f;
     public Sprite[] DeadFrames;
     public float   DeadFps = 5f;
+    public Sprite[] RasenganFrames;
+    public float   RasenganFps = 10f;
 
-    private enum State { Idle, Run, Jump, Dead }
+    private enum State { Idle, Run, Jump, Dead, Rasengan }
     private State currentState;
 
     private void Awake()
@@ -40,7 +43,7 @@ public class PlayerSpriteRenderer : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (currentState == State.Dead) return;
+        if (currentState == State.Dead || currentState == State.Rasengan) return;
 
       
         State newState = mov.Jumping
@@ -74,6 +77,24 @@ public class PlayerSpriteRenderer : MonoBehaviour
     {
         currentState = State.Dead;
         anim.PlayAnimation(DeadFrames, DeadFps);
+    }
+
+    public void PlayRasengan()
+    {
+        if (currentState == State.Dead || currentState == State.Rasengan) return;
+
+        currentState = State.Rasengan;
+        anim.PlayAnimation(RasenganFrames, RasenganFps);
+    }
+
+    public IEnumerator PlayRasenganRoutine(float duration)
+    {
+        PlayRasengan();
+
+        yield return new WaitForSeconds(duration);
+
+        currentState = State.Idle;
+        anim.PlayAnimation(IdleFrames, IdleFps);
     }
 
   

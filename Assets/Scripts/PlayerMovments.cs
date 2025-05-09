@@ -4,6 +4,7 @@ public class PlayerMovments : MonoBehaviour
 {
     private new Rigidbody2D rigidbody;
     private new Camera camera;
+    private Player player;
     
 
     private float inputAxis;
@@ -23,6 +24,7 @@ public class PlayerMovments : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         camera = Camera.main;
+        player = GetComponent<Player>();
     }
 
     private void Update()
@@ -33,6 +35,14 @@ public class PlayerMovments : MonoBehaviour
 
         if (Grounded){
             GroundedMovement();
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            player.PlayRasengan();
+            velocity = Vector2.zero;
+            return;
 
         }
 

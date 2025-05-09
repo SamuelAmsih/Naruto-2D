@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public PlayerSpriteRenderer smallRenderer;
     public PlayerSpriteRenderer bigRenderer;
     private PlayerSpriteRenderer activeRenderer;
+   
 
     private DeathAnimation deathAnimation;
     private CapsuleCollider2D capsuleCollider;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
        
         deathAnimation  = GetComponent<DeathAnimation>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        
     }
 
     private void Start()
@@ -124,5 +126,13 @@ public class Player : MonoBehaviour
         smallRenderer.Hide();
         bigRenderer.Hide();
         activeRenderer.Show();
+    }
+
+    public void PlayRasengan()
+    {
+        if (activeRenderer != null)
+        {
+        activeRenderer.StartCoroutine(activeRenderer.PlayRasenganRoutine(4f));
+        }
     }
 }
