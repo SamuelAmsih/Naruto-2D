@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using Codice.Client.Common.GameUI;
 
 public class Player : MonoBehaviour
 {
