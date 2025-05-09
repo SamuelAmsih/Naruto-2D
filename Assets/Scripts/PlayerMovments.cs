@@ -49,7 +49,7 @@ public class PlayerMovments : MonoBehaviour
     private void HorizontalMovement()
     {
             inputAxis = Input.GetAxis("Horizontal");
-            velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * MovementSpeed, MovementSpeed * Time.deltaTime);
+            velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * MovementSpeed, MovementSpeed * Time.deltaTime)/(3/2);
 
             /*if (rigidbody.Raycast(Vector2.right * velocity.x)) 
             {
@@ -108,7 +108,7 @@ public class PlayerMovments : MonoBehaviour
         {
             if (transform.DotTest(collision.transform, Vector2.down))
             {
-                velocity.y = JumpForce;
+                velocity.y = JumpForce * (3/2);
                 Jumping = true;
             }
         }

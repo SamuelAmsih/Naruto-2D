@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5621629bd200d4714bfd78e2c9beb76e
+guid: 991fb7072d7158143a11883cac5941b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8815195490453937080
-    second: Kuyobi_run1_0
+      213: -6049841672357627873
+    second: Kyuubi_Run_5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kuyobi_run1_0
+      name: Kyuubi_Run_5_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 6
-        width: 95
-        height: 53
+        x: 16
+        y: 0
+        width: 84
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8bbd12af79dd55a70800000000000000
-      internalID: 8815195490453937080
+      spriteID: f18b4cb6d05aa0ca0800000000000000
+      internalID: -6049841672357627873
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Kuyobi_run1_0: 8815195490453937080
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
