@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ce8b71775820f3e4bb403d29ef719ea5
+guid: 71a258d79469e3c47894dd9428259182
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2418985151493441511
-    second: Kyuubi_Idle_1_0
+      213: -7275635137179542681
+    second: Naruto_Run_6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kyuubi_Idle_1_0
+      name: Naruto_Run_6_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 17
         y: 0
-        width: 82
-        height: 61
+        width: 54
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 918f94032d90e6ed0800000000000000
-      internalID: -2418985151493441511
+      spriteID: 76b10150460c70b90800000000000000
+      internalID: -7275635137179542681
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Kyuubi_Idle_1_0: -2418985151493441511
+      Naruto_Run_6_0: -7275635137179542681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
