@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     [Header("Referenser till sprite-renders")]
     public PlayerSpriteRenderer smallRenderer;
     public PlayerSpriteRenderer bigRenderer;
-    private PlayerSpriteRenderer activeRenderer;
+    public PlayerSpriteRenderer activeRenderer {get; private set;}
    
 
     private DeathAnimation deathAnimation;
@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     public bool Big   => bigRenderer != null && bigRenderer.Visible;
     public bool Small => smallRenderer != null && smallRenderer.Visible;
     public bool Dead  => deathAnimation != null && deathAnimation.enabled;
+    public bool IsTransforming { get; private set; }
+
 
     private void Awake()
     {
@@ -58,6 +60,9 @@ public class Player : MonoBehaviour
             bigRenderer.PlayDeathAnimation();
 
         StartCoroutine(DelayedDeathSequence());
+        
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.death);
+
     }
 
     private IEnumerator DelayedDeathSequence()
@@ -74,6 +79,8 @@ public class Player : MonoBehaviour
 
     public void Grow()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.powerup);
+
         Debug.Log("Player.Grow() called");
 
         smallRenderer.Hide();
@@ -91,6 +98,8 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Player.Shrink() called");
 
+        StartCoroutine(PlayShrinkSounds());
+
         smallRenderer.Show();
         bigRenderer.Hide();
         activeRenderer = smallRenderer;
@@ -100,10 +109,24 @@ public class Player : MonoBehaviour
         capsuleCollider.offset = new Vector2(-0.5f, 0.6f);
 
         StartCoroutine(ScaleAnimation());
+        
     }
+
+    private IEnumerator PlayShrinkSounds()
+{
+    AudioManager.Instance.PlaySFX(AudioManager.Instance.powerdown_1);
+
+    yield return new WaitForSeconds(0.2f); 
+
+    AudioManager.Instance.PlaySFX(AudioManager.Instance.powerdown_1_2);
+}
+
+
+
 
     private IEnumerator ScaleAnimation()
     {
+        IsTransforming = true;
         float elapsed = 0f;
         float duration = 0.5f;
 
@@ -125,6 +148,7 @@ public class Player : MonoBehaviour
         smallRenderer.Hide();
         bigRenderer.Hide();
         activeRenderer.Show();
+        IsTransforming = false;
     }
 
     public void PlayRasengan()

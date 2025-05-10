@@ -8,6 +8,7 @@ public class PlayerSpriteRenderer : MonoBehaviour
     private AnimatedSprite anim;
     private PlayerMovments mov;
     private SpriteRenderer spriteRend;
+    private Player player;
 
     public Sprite[] IdleFrames;
     public float   IdleFps = 2f;
@@ -18,7 +19,7 @@ public class PlayerSpriteRenderer : MonoBehaviour
     public Sprite[] DeadFrames;
     public float   DeadFps = 5f;
     public Sprite[] RasenganFrames;
-    public float   RasenganFps = 10f;
+    public float   RasenganFps = 20f;
 
     private enum State { Idle, Run, Jump, Dead, Rasengan }
     private State currentState;
@@ -29,6 +30,8 @@ public class PlayerSpriteRenderer : MonoBehaviour
         anim       = GetComponent<AnimatedSprite>();
         mov        = GetComponentInParent<PlayerMovments>();
         spriteRend = GetComponent<SpriteRenderer>();
+        player = GetComponentInParent<Player>();
+
 
         if (spriteRend == null)
             Debug.LogError($"[{name}] Kunde inte hitta SpriteRenderer-komponenten!");
@@ -81,10 +84,17 @@ public class PlayerSpriteRenderer : MonoBehaviour
 
     public void PlayRasengan()
     {
-        if (currentState == State.Dead || currentState == State.Rasengan) return;
+        
+        if (currentState == State.Dead || currentState == State.Rasengan || player.IsTransforming || player.Big) return;
 
+        
         currentState = State.Rasengan;
         anim.PlayAnimation(RasenganFrames, RasenganFps);
+
+        
+        StartCoroutine(PlayRasenganSounds());
+        
+        
     }
 
     public IEnumerator PlayRasenganRoutine(float duration)
@@ -95,7 +105,30 @@ public class PlayerSpriteRenderer : MonoBehaviour
 
         currentState = State.Idle;
         anim.PlayAnimation(IdleFrames, IdleFps);
+        
     }
+
+    private IEnumerator PlayRasenganSounds()
+    {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.kagenojutsu);
+
+        yield return new WaitForSeconds(0.5f);
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.rasengan);
+
+        yield return new WaitForSeconds(2.35f);
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.rasengan2);
+
+
+        
+    }
+
+    public bool IsRasenganActive()
+{
+    return currentState == State.Rasengan;
+}
+
 
   
     public void Show()

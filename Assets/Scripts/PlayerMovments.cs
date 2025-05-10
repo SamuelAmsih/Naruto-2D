@@ -40,6 +40,8 @@ public class PlayerMovments : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (player.IsTransforming) return;
+            if (player.activeRenderer.IsRasenganActive()) return;
             player.PlayRasengan();
             velocity = Vector2.zero;
             return;
@@ -82,6 +84,7 @@ public class PlayerMovments : MonoBehaviour
         {
             velocity.y = JumpForce;
             Jumping = true;
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.jump);
         }
     }
 
