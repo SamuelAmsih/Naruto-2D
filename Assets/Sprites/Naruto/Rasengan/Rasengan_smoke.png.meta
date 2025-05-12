@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rasengan_smoke_0: 5800635757194009474
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

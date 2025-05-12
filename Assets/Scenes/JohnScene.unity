@@ -268,63 +268,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 574246540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &224718292
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4037640810877221778, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_Name
-      value: IchirakuRamen (kopia) 1 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122090537150627494, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 21.982742
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122090537150627494, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.5255271
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122090537150627494, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122090537150627494, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122090537150627494, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122090537150627494, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122090537150627494, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122090537150627494, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122090537150627494, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122090537150627494, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 005e0a6a8948041cd9c6ed7fffa19534, type: 3}
 --- !u!1 &574246539
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +634,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 769815209
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 8541096820466403438, guid: c139bd0264a3544fe8675103d61207cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1003,7 +946,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.695172, y: 2.61}
+    oldSize: {x: 5.68, y: 2.61}
     newSize: {x: 5.695172, y: 2.61}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1101,7 +1044,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 769815209
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 2380674308724163331, guid: 0210c3481cdaa490abf51383e5a3f53e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1318,7 +1261,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 769815209
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b301b22c7f48c48648377b741e2fdcc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1352,4 +1295,3 @@ SceneRoots:
   m_Roots:
   - {fileID: 1252237879}
   - {fileID: 574246540}
-  - {fileID: 224718292}

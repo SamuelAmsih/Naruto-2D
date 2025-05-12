@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rasengan_10_0: -3829718989423776163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
