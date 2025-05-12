@@ -127,6 +127,26 @@ public class PlayerMovments : MonoBehaviour
             }
         }
     }
+
+    #if UNITY_EDITOR
+public void TestFlip(float simulatedInput)
+{
+    // bypass Input.GetAxis
+    velocity.x = Mathf.MoveTowards(0, simulatedInput * MovementSpeed, MovementSpeed * Time.deltaTime) / 1.5f;
+
+    if (velocity.x > 0f)
+    {
+        naruto.eulerAngles = Vector3.zero;
+        kuyobi.eulerAngles = Vector3.zero;
+    }
+    else if (velocity.x < 0f)
+    {
+        naruto.eulerAngles = new Vector3(0f, 180f, 0f);
+        kuyobi.eulerAngles = new Vector3(0f, 180f, 0f);
+    }
+}
+#endif
+
 }
 
 //Filip

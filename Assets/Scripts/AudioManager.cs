@@ -42,4 +42,12 @@ public class AudioManager : MonoBehaviour
         SFXSource.PlayOneShot(Clip);
     }
 
+    #if UNITY_EDITOR
+public void SetBackgroundManually()
+{
+    musicSource.clip = background;
+}
+#endif
+
+
 }
