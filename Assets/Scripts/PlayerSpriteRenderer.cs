@@ -1,4 +1,4 @@
-// PlayerSpriteRenderer.cs
+
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
