@@ -123,6 +123,8 @@ MonoBehaviour:
   JumpFps: 4
   DeadFrames: []
   DeadFps: 5
+  RasenganFrames: []
+  RasenganFps: 20
 --- !u!114 &3314656033902836237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,7 +370,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7746561830279732047
@@ -409,6 +411,39 @@ MonoBehaviour:
   - {fileID: -4441604535275347869, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
   - {fileID: 8433475746572086837, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
   DeadFps: 1
+  RasenganFrames:
+  - {fileID: -3266072912212075359, guid: 7bf0e34efb127403b9451ee2f920b3dd, type: 3}
+  - {fileID: 3058737248901666511, guid: f479b28712cbf4d419fe485ef32ac86a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RasenganFps: 20
 --- !u!114 &4785551562314476784
 MonoBehaviour:
   m_ObjectHideFlags: 0
