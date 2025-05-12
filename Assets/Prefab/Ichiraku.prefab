@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3932089984427838835}
   - component: {fileID: 9043481842961638097}
   - component: {fileID: 7669757010605698281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ichiraku
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7933405845287502701}
   - component: {fileID: 5280406015971256396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,9 +167,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 769815209
-  m_SortingLayer: 4
-  m_SortingOrder: 8
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f9b2fb79f7c0d4650a4be5126a0c0d2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

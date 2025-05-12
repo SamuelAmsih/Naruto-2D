@@ -72,19 +72,19 @@ public class Player : MonoBehaviour
     }
 
     public void Grow()
-{
-    Debug.Log("Player.Grow() called");
-    smallRenderer.Hide();
-    bigRenderer.Show();
-    activeRenderer = bigRenderer;
-     
-    // Correct way to set a horizontal capsule collider
-    capsuleCollider.direction = CapsuleDirection2D.Horizontal;
-    capsuleCollider.size = new Vector2(0.5f, 0.4f); // Use positive values
-    capsuleCollider.offset = new Vector2(0f, 0.4f); // Adjust as needed
-    
-    StartCoroutine(ScaleAnimation());
-}
+    {
+        Debug.Log("Player.Grow() called");
+        smallRenderer.Hide();
+        bigRenderer.Show();
+        activeRenderer = bigRenderer;
+        
+        // Correct way to set a horizontal capsule collider
+        capsuleCollider.direction = CapsuleDirection2D.Horizontal;
+        capsuleCollider.size = new Vector2(0.9f, 0.5f); // Use positive values
+        capsuleCollider.offset = new Vector2(-0.5f, 0.4f); // Adjust as needed
+        
+        StartCoroutine(ScaleAnimation());
+    }
 
     private void Shrink()
     {

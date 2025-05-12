@@ -38,8 +38,6 @@ public class PlayerMovments : MonoBehaviour
         }
 
         ApplyGravity();
-
-        
     }
 
     public UnityEngine.Transform kuyobi;
@@ -59,14 +57,11 @@ public class PlayerMovments : MonoBehaviour
             if  (velocity.x > 0f){
                 naruto.eulerAngles = Vector3.zero;
                 kuyobi.eulerAngles = Vector3.zero;
-
-            } else if (velocity.x < 0f){
+                
+            } else if (velocity.x < 0f) {
                 naruto.eulerAngles = new Vector3(0f, 180f, 0f);
                 kuyobi.eulerAngles = new Vector3(0f, 180f, 0f);
-
             }
-
-        
     }
 
     private void GroundedMovement()
