@@ -52,26 +52,90 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Player.Death() called");
 
+        // Disable player movement
+        GetComponent<PlayerMovments>().enabled = false;
+
+        // Play death animation for current form
         if (Small)
             smallRenderer.PlayDeathAnimation();
         else if (Big)
             bigRenderer.PlayDeathAnimation();
 
-        StartCoroutine(DelayedDeathSequence());
+        // Pause game elements
+        PauseGameElements();
 
+        // Play death sound
         AudioManager.Instance.PlaySFX(AudioManager.Instance.death);
+        
+        // Pause background music
+        AudioManager.Instance.StopMusic();
+
+        // Start the death sequence
+        StartCoroutine(DelayedDeathSequence());
+    }
+
+// Add this new method to pause all game elements
+    private void PauseGameElements()
+    {
+        // Freeze all enemies by disabling their movement scripts
+        EntityMovement[] enemies = Object.FindObjectsByType<EntityMovement>(FindObjectsSortMode.None);
+        foreach (EntityMovement enemy in enemies)
+        {
+            enemy.enabled = false;
+        }
+
+        // Freeze any moving platforms or other objects with scripts
+        MonoBehaviour[] movingObjects = Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
+        foreach (MonoBehaviour script in movingObjects)
+        {
+            // Skip player-related scripts and this script
+            if (script.gameObject != gameObject &&
+                !(script is Player) &&
+                !(script is PlayerSpriteRenderer) &&
+                !(script is DeathAnimation))
+            {
+                // Disable scripts that might control movement
+                // You may need to add specific script types to check for
+                if (script is EntityMovement || script.GetType().Name.Contains("Movement"))
+                {
+                    script.enabled = false;
+                }
+            }
+        }
+
+        // Freeze physics objects (optional - use if you want to freeze falling objects too)
+        Rigidbody2D[] rigidbodies = Object.FindObjectsByType<Rigidbody2D>(FindObjectsSortMode.None);
+        foreach (Rigidbody2D rb in rigidbodies)
+        {
+            // Skip the player's rigidbody
+            if (rb.gameObject != gameObject)
+            {
+                // Store original velocity if you need to restore it later
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+                rb.simulated = false; // This effectively freezes the physics object
+            }
+        }
     }
 
     private IEnumerator DelayedDeathSequence()
     {
+        // Wait a moment before starting death animation
         yield return new WaitForSeconds(0.5f);
 
-        // Dölj båda och aktivera DeathAnimation
+        // Hide renderers and activate death animation
         smallRenderer.Hide();
         bigRenderer.Hide();
         deathAnimation.enabled = true;
-
-        GameManager.Instance.ResetLevel(3f);
+        
+        // Let the death animation play for a bit
+        //yield return new WaitForSeconds(1.5f);
+        
+        // Show game over UI if you have one
+        //GameManager.Instance.ShowGameOverScreen();
+        
+        // Reset the level after a delay
+        GameManager.Instance.ResetLevel(2f);
     }
 
     public void Grow()

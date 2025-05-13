@@ -45,14 +45,22 @@ public class GameManager : MonoBehaviour
         LoadLevel(1, 1);
     }
 
+// You don't need to modify your GameManager's ResetLevel methods,
+// but simply add a call to restart music when loading a level:
+
     public void LoadLevel(int world, int stage)
     {
         this.World = world;
         this.Stage = stage;
-
+        
+        // Restart music when loading a new level
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayMusic();
+        }
+        
         SceneManager.LoadScene($"{world}-{stage}");
     }
-
     public void NextLevel()
     {
         LoadLevel(World, Stage + 1);
@@ -74,6 +82,75 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Add these new methods to your GameManager.cs
+
+// For pausing/freezing all game elements
+    public void PauseGame()
+    {
+        // Find and disable all enemy movement scripts using the new method
+        EntityMovement[] enemies = Object.FindObjectsByType<EntityMovement>(FindObjectsSortMode.None);
+        foreach (EntityMovement enemy in enemies)
+        {
+            enemy.enabled = false;
+        }
+    
+        // Freeze physics objects using the new method
+        Rigidbody2D[] rigidbodies = Object.FindObjectsByType<Rigidbody2D>(FindObjectsSortMode.None);
+        foreach (Rigidbody2D rb in rigidbodies)
+        {
+            // Skip any specific rigidbodies you don't want to freeze
+            if (rb.gameObject.CompareTag("Player") == false)
+            {
+                rb.linearVelocity = Vector2.zero;  // Use linearVelocity instead of velocity
+                rb.angularVelocity = 0f;
+                rb.simulated = false;
+            }
+        }
+    }
+
+// Similarly, update the ResumeGame method
+    public void ResumeGame()
+    {
+        // Re-enable enemy scripts using the new method
+        EntityMovement[] enemies = Object.FindObjectsByType<EntityMovement>(FindObjectsSortMode.None);
+        foreach (EntityMovement enemy in enemies)
+        {
+            enemy.enabled = true;
+        }
+        
+        // Unfreeze physics objects using the new method
+        Rigidbody2D[] rigidbodies = Object.FindObjectsByType<Rigidbody2D>(FindObjectsSortMode.None);
+        foreach (Rigidbody2D rb in rigidbodies)
+        {
+            if (rb.gameObject.CompareTag("Player") == false)
+            {
+                rb.simulated = true;
+            }
+        }
+    }
+
+// Optional method if you want to resume game state (not needed for death sequence)
+    /*
+    public void ResumeGame()
+    {
+        // Re-enable enemy scripts
+        EntityMovement[] enemies = FindObjectsOfType<EntityMovement>();
+        foreach (EntityMovement enemy in enemies)
+        {
+            enemy.enabled = true;
+        }
+        
+        // Unfreeze physics objects
+        Rigidbody2D[] rigidbodies = FindObjectsOfType<Rigidbody2D>();
+        foreach (Rigidbody2D rb in rigidbodies)
+        {
+            if (rb.gameObject.CompareTag("Player") == false)
+            {
+                rb.simulated = true;
+            }
+        }
+    }
+    */
     private void GameOver()
     {
         NewGame();

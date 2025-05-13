@@ -42,12 +42,32 @@ public class AudioManager : MonoBehaviour
         SFXSource.PlayOneShot(Clip);
     }
 
+   // Replace the existing PauseMusic() method with this:
+    public void StopMusic()
+    {
+        // Completely stop the music instead of pausing it
+        if (musicSource != null)
+        {
+            musicSource.Stop();
+        }
+    }
+
+    // Replace the existing RestartMusic() method with this:
+    public void PlayMusic()
+    {
+        // Start the appropriate music track from the beginning
+        if (musicSource != null)
+        {
+            musicSource.Play();
+        }
+    }
+
     #if UNITY_EDITOR
-public void SetBackgroundManually()
-{
-    musicSource.clip = background;
-}
-#endif
+    public void SetBackgroundManually()
+    {
+        musicSource.clip = background;
+    }
+    #endif
 
 
 }
