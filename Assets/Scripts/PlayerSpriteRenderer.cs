@@ -75,6 +75,30 @@ public class PlayerSpriteRenderer : MonoBehaviour
         }
     }
 
+    // Add a method to your PlayerSpriteRenderer class to handle blinking
+    public IEnumerator Blink(float duration, float blinkRate)
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null) yield break;
+        
+        float endTime = Time.time + duration;
+        
+        while (Time.time < endTime)
+        {
+            // Toggle alpha between half and full
+            Color color = spriteRenderer.color;
+            color.a = color.a > 0.5f ? 0.5f : 1f;
+            spriteRenderer.color = color;
+            
+            yield return new WaitForSeconds(blinkRate);
+        }
+        
+        // Ensure full opacity at the end
+        Color finalColor = spriteRenderer.color;
+        finalColor.a = 1f;
+        spriteRenderer.color = finalColor;
+    }
+
     public void PlayDeathAnimation()
     {
         currentState = State.Dead;

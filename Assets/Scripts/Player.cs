@@ -18,6 +18,39 @@ public class Player : MonoBehaviour
     public bool Dead  => deathAnimation != null && deathAnimation.enabled;
     public bool IsTransforming {get; private set;}
 
+        // Add these variables to your Player class
+    private bool isFacingRight = true;
+    private Vector2 rightFacingBigOffset = new Vector2(-0.5f, 0.4f);  // Your current big form offset
+    private Vector2 leftFacingBigOffset = new Vector2(-1.5f, 0.4f);    // Mirrored X offset for big form
+
+// Add this method to update the facing direction
+    public void UpdateFacingDirection(bool facingRight)
+    {
+        // Only update if direction actually changed
+        if (isFacingRight != facingRight)
+        {
+            isFacingRight = facingRight;
+            
+            // Only update collider offset if in big form
+            if (Big)
+            {
+                UpdateBigColliderOffset();
+            }
+        }
+    }
+
+    // Simplified method that only updates the collider for big form
+    private void UpdateBigColliderOffset()
+    {
+        if (capsuleCollider == null) return;
+        
+        // Only adjust offset for big form - small form remains unchanged
+        if (Big)
+        {
+            capsuleCollider.offset = isFacingRight ? rightFacingBigOffset : leftFacingBigOffset;
+        }
+    }
+
     private void Awake()
     {
        
@@ -33,19 +66,79 @@ public class Player : MonoBehaviour
         activeRenderer = smallRenderer;
     }
 
-    public void Hit()
+// Add these variables to your Player class
+[Header("Invincibility Settings")]
+public float invincibilityDuration = 2f;
+public float blinkRate = 0.1f;
+private bool isInvincible = false;
+
+// Modify your Hit method
+public void Hit()
+{
+    Debug.Log("Player.Hit() called");
+    
+    // If already invincible, ignore the hit
+    if (isInvincible) return;
+    
+    if (Big)
     {
-        Debug.Log("Player.Hit() called");
-        if (Big)
+        Debug.Log("Player is Big, shrinking");
+        Shrink();
+        
+        // Start invincibility after shrinking
+        StartCoroutine(InvincibilityRoutine());
+    }
+    else
+    {
+        Debug.Log("Player is Small, dying");
+        Death();
+    }
+}
+
+// Add this coroutine to handle invincibility
+// Modify this coroutine to handle invincibility
+    private IEnumerator InvincibilityRoutine()
+    {
+        isInvincible = true;
+        
+        // Get reference to sprite renderer
+        SpriteRenderer spriteRenderer = smallRenderer.GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
         {
-            Debug.Log("Player is Big, shrinking");
-            Shrink();
+            // If the SpriteRenderer isn't directly on smallRenderer, try to find it in children
+            spriteRenderer = smallRenderer.GetComponentInChildren<SpriteRenderer>();
+        }
+        
+        // Blink the sprite during invincibility period
+        float invincibilityEndTime = Time.time + invincibilityDuration;
+        
+        if (spriteRenderer != null)
+        {
+            // Store original color
+            Color originalColor = spriteRenderer.color;
+            
+            // Blink by changing alpha
+            while (Time.time < invincibilityEndTime)
+            {
+                // Toggle alpha between half and full
+                Color tempColor = spriteRenderer.color;
+                tempColor.a = tempColor.a > 0.5f ? 0.3f : 1f;
+                spriteRenderer.color = tempColor;
+                
+                yield return new WaitForSeconds(blinkRate);
+            }
+            
+            // Restore original color
+            spriteRenderer.color = originalColor;
         }
         else
         {
-            Debug.Log("Player is Small, dying");
-            Death();
+            // Fallback if sprite renderer not found - just wait
+            yield return new WaitForSeconds(invincibilityDuration);
         }
+        
+        isInvincible = false;
+        Debug.Log("Invincibility ended");
     }
 
     private void Death()
@@ -138,6 +231,8 @@ public class Player : MonoBehaviour
         GameManager.Instance.ResetLevel(2f);
     }
 
+    
+
     public void Grow()
     {
         AudioManager.Instance.PlaySFX(AudioManager.Instance.powerup);
@@ -147,14 +242,17 @@ public class Player : MonoBehaviour
         bigRenderer.Show();
         activeRenderer = bigRenderer;
         
-        // Correct way to set a horizontal capsule collider
+        // Set the collider properties for big form
         capsuleCollider.direction = CapsuleDirection2D.Horizontal;
-        capsuleCollider.size = new Vector2(0.9f, 0.5f); // Use positive values
-        capsuleCollider.offset = new Vector2(-0.5f, 0.4f); // Adjust as needed
+        capsuleCollider.size = new Vector2(0.9f, 0.5f);
+        
+        // Set the initial offset based on current facing direction
+        capsuleCollider.offset = isFacingRight ? rightFacingBigOffset : leftFacingBigOffset;
         
         StartCoroutine(ScaleAnimation());
     }
 
+ // Modify your Shrink method to start invincibility after the scale animation
     private void Shrink()
     {
         Debug.Log("Player.Shrink() called");
@@ -165,12 +263,22 @@ public class Player : MonoBehaviour
         bigRenderer.Hide();
         activeRenderer = smallRenderer;
 
-        // Uppdatera collider för liten form
+        // Update collider for small form
         capsuleCollider.direction = CapsuleDirection2D.Vertical;
-        capsuleCollider.size   = new Vector2(0.6f, 0.9f);
+        capsuleCollider.size = new Vector2(0.6f, 0.9f);
         capsuleCollider.offset = new Vector2(-0.45f, 0.57f);
 
-        StartCoroutine(ScaleAnimation());
+        // Start scale animation and chain to invincibility afterwards
+        StartCoroutine(ScaleAnimationThenInvincibility());
+    }
+
+    // New method to chain animations
+    private IEnumerator ScaleAnimationThenInvincibility()
+    {
+        yield return StartCoroutine(ScaleAnimation());
+        
+        // Start invincibility after scale animation completes
+        StartCoroutine(InvincibilityRoutine());
     }
 
     private IEnumerator PlayShrinkSounds()

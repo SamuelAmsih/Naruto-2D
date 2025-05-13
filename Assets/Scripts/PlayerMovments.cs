@@ -36,7 +36,6 @@ public class PlayerMovments : MonoBehaviour
 
         if (Grounded){
             GroundedMovement();
-
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -52,27 +51,32 @@ public class PlayerMovments : MonoBehaviour
     }
 
     public UnityEngine.Transform kuyobi;
-
     public UnityEngine.Transform naruto;
+    //handleing X-axis movements
     //handleing X-axis movements
     private void HorizontalMovement()
     {
-            inputAxis = Input.GetAxis("Horizontal");
-            velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * MovementSpeed, MovementSpeed * Time.deltaTime)/(3/2);
+        inputAxis = Input.GetAxis("Horizontal");
+        velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * MovementSpeed, MovementSpeed * Time.deltaTime)/(3/2);
 
-            /*if (rigidbody.Raycast(Vector2.right * velocity.x)) 
-            {
-                velocity.x = 0f;
-            } for collision with objects in x-axis, not working properly*/
-            //animation rotation
-            if  (velocity.x > 0f){
-                naruto.eulerAngles = Vector3.zero;
-                kuyobi.eulerAngles = Vector3.zero;
-                
-            } else if (velocity.x < 0f) {
-                naruto.eulerAngles = new Vector3(0f, 180f, 0f);
-                kuyobi.eulerAngles = new Vector3(0f, 180f, 0f);
-            }
+        //animation rotation
+        if (velocity.x > 0f)
+        {
+            naruto.eulerAngles = Vector3.zero;
+            kuyobi.eulerAngles = Vector3.zero;
+            
+            // Update the player direction
+            player.UpdateFacingDirection(true);
+            
+        } 
+        else if (velocity.x < 0f) 
+        {
+            naruto.eulerAngles = new Vector3(0f, 180f, 0f);
+            kuyobi.eulerAngles = new Vector3(0f, 180f, 0f);
+            
+            // Update the player direction
+            player.UpdateFacingDirection(false);
+        }
     }
 
     private void GroundedMovement()
