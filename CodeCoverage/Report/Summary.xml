@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>5/14/2025 - 2:45:57 PM</Generatedon>
+    <Generatedon>2025-05-14 - 20:51:20</Generatedon>
     <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
     <Assemblies>2</Assemblies>
     <Classes>29</Classes>
     <Files>28</Files>
     <Coveredlines>235</Coveredlines>
-    <Uncoveredlines>569</Uncoveredlines>
-    <Coverablelines>804</Coverablelines>
-    <Totallines>2159</Totallines>
-    <Linecoverage>29.2</Linecoverage>
+    <Uncoveredlines>573</Uncoveredlines>
+    <Coverablelines>808</Coverablelines>
+    <Totallines>2167</Totallines>
+    <Linecoverage>29</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
-    <Coveredmethods>66</Coveredmethods>
+    <Coveredmethods>65</Coveredmethods>
     <Totalmethods>170</Totalmethods>
-    <Methodcoverage>38.8</Methodcoverage>
+    <Methodcoverage>38.2</Methodcoverage>
   </Summary>
   <Coverage>
-    <Assembly name="Scripts" classes="18" coverage="8.9" coveredlines="55" coverablelines="612" totallines="1565" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="28" totalmethods="132" methodcoverage="21.2">
+    <Assembly name="Scripts" classes="18" coverage="8.9" coveredlines="55" coverablelines="616" totallines="1573" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="27" totalmethods="132" methodcoverage="20.4">
       <Class name="AnimatedSprite" coverage="0" coveredlines="0" coverablelines="17" totallines="40" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
       <Class name="AudioManager" coverage="21" coveredlines="4" coverablelines="19" totallines="74" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="8" methodcoverage="25" />
       <Class name="BoxHit" coverage="65.3" coveredlines="17" coverablelines="26" totallines="72" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="5" methodcoverage="80" />
@@ -29,11 +29,11 @@
       <Class name="Enemyninja" coverage="0" coveredlines="0" coverablelines="18" totallines="41" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
       <Class name="EnemySpriteRenderer" coverage="0" coveredlines="0" coverablelines="18" totallines="53" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
       <Class name="EntityMovement" coverage="0" coveredlines="0" coverablelines="39" totallines="105" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="9" methodcoverage="0" />
-      <Class name="Extensions" coverage="13" coveredlines="3" coverablelines="23" totallines="49" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="3" methodcoverage="66.6" />
+      <Class name="Extensions" coverage="7.6" coveredlines="2" coverablelines="26" totallines="56" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
       <Class name="GameManager" coverage="8.1" coveredlines="5" coverablelines="61" totallines="176" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="10" totalmethods="23" methodcoverage="43.4" />
       <Class name="LevelComplete" coverage="0" coveredlines="0" coverablelines="14" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
       <Class name="Player" coverage="0" coveredlines="0" coverablelines="134" totallines="339" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="23" methodcoverage="0" />
-      <Class name="PlayerMovments" coverage="17.6" coveredlines="12" coverablelines="68" totallines="155" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="16" methodcoverage="31.2" />
+      <Class name="PlayerMovments" coverage="18.8" coveredlines="13" coverablelines="69" totallines="156" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="16" methodcoverage="31.2" />
       <Class name="PlayerSpriteRenderer" coverage="18.1" coveredlines="14" coverablelines="77" totallines="182" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="16" methodcoverage="31.2" />
       <Class name="PowerUp" coverage="0" coveredlines="0" coverablelines="9" totallines="38" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
       <Class name="SideScrolling" coverage="0" coveredlines="0" coverablelines="6" totallines="20" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />

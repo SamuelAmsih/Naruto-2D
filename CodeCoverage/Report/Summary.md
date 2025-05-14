@@ -1,25 +1,25 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 5/14/2025 - 2:45:57 PM |
+| Generated on: | 2025-05-14 - 20:51:20 |
 | Parser: | MultiReportParser (2x OpenCoverParser) |
 | Assemblies: | 2 |
 | Classes: | 29 |
 | Files: | 28 |
 | Covered lines: | 235 |
-| Uncovered lines: | 569 |
-| Coverable lines: | 804 |
-| Total lines: | 2159 |
-| Line coverage: | 29.2% (235 of 804) |
+| Uncovered lines: | 573 |
+| Coverable lines: | 808 |
+| Total lines: | 2167 |
+| Line coverage: | 29% (235 of 808) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 66 |
+| Covered methods: | 65 |
 | Total methods: | 170 |
-| Method coverage: | 38.8% (66 of 170) |
+| Method coverage: | 38.2% (65 of 170) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**Scripts**|**55**|**557**|**612**|**1565**|**8.9%**|**0**|**0**|****|**28**|**132**|**21.2%**|
+|**Scripts**|**55**|**561**|**616**|**1573**|**8.9%**|**0**|**0**|****|**27**|**132**|**20.4%**|
 |AnimatedSprite|0|17|17|40|0%|0|0||0|4|0%|
 |AudioManager|4|15|19|74|21%|0|0||2|8|25%|
 |BoxHit|17|9|26|72|65.3%|0|0||4|5|80%|
@@ -30,11 +30,11 @@
 |Enemyninja|0|18|18|41|0%|0|0||0|2|0%|
 |EnemySpriteRenderer|0|18|18|53|0%|0|0||0|5|0%|
 |EntityMovement|0|39|39|105|0%|0|0||0|9|0%|
-|Extensions|3|20|23|49|13%|0|0||2|3|66.6%|
+|Extensions|2|24|26|56|7.6%|0|0||1|3|33.3%|
 |GameManager|5|56|61|176|8.1%|0|0||10|23|43.4%|
 |LevelComplete|0|14|14|36|0%|0|0||0|3|0%|
 |Player|0|134|134|339|0%|0|0||0|23|0%|
-|PlayerMovments|12|56|68|155|17.6%|0|0||5|16|31.2%|
+|PlayerMovments|13|56|69|156|18.8%|0|0||5|16|31.2%|
 |PlayerSpriteRenderer|14|63|77|182|18.1%|0|0||5|16|31.2%|
 |PowerUp|0|9|9|38|0%|0|0||0|2|0%|
 |SideScrolling|0|6|6|20|0%|0|0||0|2|0%|

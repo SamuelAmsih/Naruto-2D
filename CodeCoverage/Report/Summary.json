@@ -1,24 +1,24 @@
 {
   "summary": {
-    "generatedon": "2025-05-14T12:45:57Z",
+    "generatedon": "2025-05-14T18:51:20Z",
     "parser": "MultiReportParser (2x OpenCoverParser)",
     "assemblies": 2,
     "classes": 29,
     "files": 28,
     "coveredlines": 235,
-    "uncoveredlines": 569,
-    "coverablelines": 804,
-    "totallines": 2159,
-    "linecoverage": 29.2,
+    "uncoveredlines": 573,
+    "coverablelines": 808,
+    "totallines": 2167,
+    "linecoverage": 29,
     "coveredbranches": 0,
     "totalbranches": 0,
-    "coveredmethods": 66,
+    "coveredmethods": 65,
     "totalmethods": 170,
-    "methodcoverage": 38.8
+    "methodcoverage": 38.2
  },
   "coverage": {
     "assemblies": [
-      { "name": "Scripts", "classes": 18, "coverage": 8.9, "coveredlines": 55, "coverablelines": 612, "totallines": 1565, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 21.2, "coveredmethods": 28, "totalmethods": 132, "classesinassembly": [
+      { "name": "Scripts", "classes": 18, "coverage": 8.9, "coveredlines": 55, "coverablelines": 616, "totallines": 1573, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 20.4, "coveredmethods": 27, "totalmethods": 132, "classesinassembly": [
         { "name": "AnimatedSprite", "coverage": 0, "coveredlines": 0, "coverablelines": 17, "totallines": 40, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
         { "name": "AudioManager", "coverage": 21, "coveredlines": 4, "coverablelines": 19, "totallines": 74, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 25, "coveredmethods": 2, "totalmethods": 8 },
         { "name": "BoxHit", "coverage": 65.3, "coveredlines": 17, "coverablelines": 26, "totallines": 72, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 80, "coveredmethods": 4, "totalmethods": 5 },
@@ -29,11 +29,11 @@
         { "name": "Enemyninja", "coverage": 0, "coveredlines": 0, "coverablelines": 18, "totallines": 41, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 2 },
         { "name": "EnemySpriteRenderer", "coverage": 0, "coveredlines": 0, "coverablelines": 18, "totallines": 53, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 },
         { "name": "EntityMovement", "coverage": 0, "coveredlines": 0, "coverablelines": 39, "totallines": 105, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 9 },
-        { "name": "Extensions", "coverage": 13, "coveredlines": 3, "coverablelines": 23, "totallines": 49, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 66.6, "coveredmethods": 2, "totalmethods": 3 },
+        { "name": "Extensions", "coverage": 7.6, "coveredlines": 2, "coverablelines": 26, "totallines": 56, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 33.3, "coveredmethods": 1, "totalmethods": 3 },
         { "name": "GameManager", "coverage": 8.1, "coveredlines": 5, "coverablelines": 61, "totallines": 176, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 43.4, "coveredmethods": 10, "totalmethods": 23 },
         { "name": "LevelComplete", "coverage": 0, "coveredlines": 0, "coverablelines": 14, "totallines": 36, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
         { "name": "Player", "coverage": 0, "coveredlines": 0, "coverablelines": 134, "totallines": 339, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 23 },
-        { "name": "PlayerMovments", "coverage": 17.6, "coveredlines": 12, "coverablelines": 68, "totallines": 155, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 31.2, "coveredmethods": 5, "totalmethods": 16 },
+        { "name": "PlayerMovments", "coverage": 18.8, "coveredlines": 13, "coverablelines": 69, "totallines": 156, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 31.2, "coveredmethods": 5, "totalmethods": 16 },
         { "name": "PlayerSpriteRenderer", "coverage": 18.1, "coveredlines": 14, "coverablelines": 77, "totallines": 182, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 31.2, "coveredmethods": 5, "totalmethods": 16 },
         { "name": "PowerUp", "coverage": 0, "coveredlines": 0, "coverablelines": 9, "totallines": 38, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 2 },
         { "name": "SideScrolling", "coverage": 0, "coveredlines": 0, "coverablelines": 6, "totallines": 20, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 2 } ] },

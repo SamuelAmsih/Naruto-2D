@@ -20,6 +20,7 @@ public class PlayerMovments : MonoBehaviour
     public bool Grounded { get; private set; }
     public bool Jumping { get; private set; }
     public bool Running => Mathf.Abs(velocity.x) > 0.25f || Mathf.Abs(inputAxis) > 0.25f;
+    Vector2 groundCheckOffset = new Vector2(-0.2f, 0f);
     
     private void Awake()
     {
@@ -32,7 +33,7 @@ public class PlayerMovments : MonoBehaviour
     {
         HorizontalMovement();
 
-        Grounded = rigidbody.Raycast(Vector2.down);
+        Grounded = rigidbody.Raycast(Vector2.down, groundCheckOffset);
 
         if (Grounded){
             GroundedMovement();
