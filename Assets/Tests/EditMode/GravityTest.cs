@@ -28,12 +28,16 @@ namespace Tests
             pm.MaxJumpHeight = 5f;
             pm.MaxJumpTime   = 1f;
 
+             Debug.Log($"MaxJumpHeight = {pm.MaxJumpHeight}, MaxJumpTime = {pm.MaxJumpTime}");
+
             // Förväntat värde enligt formeln i ditt skript
-            float expected = (-2f * pm.MaxJumpHeight)
+            float expected = (-3.5f * pm.MaxJumpHeight)
                            / Mathf.Pow((pm.MaxJumpTime / 2f), 2);
 
             // ACT
             float actual = pm.Gravity;
+
+            Debug.Log($"Expected: {expected}, Actual: {actual}");
 
             // ASSERT
             Assert.AreEqual(expected, actual, 0.0001f,

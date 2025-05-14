@@ -1,19 +1,21 @@
+//using log4net.Util;
 using UnityEngine;
 
 public class PlayerMovments : MonoBehaviour
 {
     private new Rigidbody2D rigidbody;
     private new Camera camera;
+    private Player player;
     
 
     private float inputAxis;
     private Vector2 velocity;
 
-    public float MovementSpeed = 8f;
+    public float MovementSpeed = 6f;
     public float MaxJumpHeight = 5f;
     public float MaxJumpTime = 1f;
     public float JumpForce => (2f * MaxJumpHeight) / (MaxJumpTime / 2f);
-    public float Gravity => (-2f * MaxJumpHeight) / Mathf.Pow((MaxJumpTime / 2f), 2);
+    public float Gravity => (-3.5f * MaxJumpHeight) / Mathf.Pow((MaxJumpTime / 2f), 2);
     
     public bool Grounded { get; private set; }
     public bool Jumping { get; private set; }
@@ -23,6 +25,7 @@ public class PlayerMovments : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         camera = Camera.main;
+        player = GetComponent<Player>();
     }
 
     private void Update()
@@ -33,33 +36,47 @@ public class PlayerMovments : MonoBehaviour
 
         if (Grounded){
             GroundedMovement();
+        }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (player.IsTransforming) return;
+            if (player.activeRenderer.IsRasenganActive()) return;
+            player.PlayRasengan();
+            velocity = Vector2.zero;
+            return;
         }
 
         ApplyGravity();
-
-        
     }
 
+    public UnityEngine.Transform kuyobi;
+    public UnityEngine.Transform naruto;
+    //handleing X-axis movements
     //handleing X-axis movements
     private void HorizontalMovement()
     {
-            inputAxis = Input.GetAxis("Horizontal");
-            velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * MovementSpeed, MovementSpeed * Time.deltaTime);
+        inputAxis = Input.GetAxis("Horizontal");
+        velocity.x = inputAxis * MovementSpeed;//Mathf.MoveTowards(velocity.x, inputAxis * MovementSpeed, MovementSpeed * Time.deltaTime)/(3/2);
 
-            /*if (rigidbody.Raycast(Vector2.right * velocity.x)) 
-            {
-                velocity.x = 0f;
-            } for collision with objects in x-axis, not working properly*/
-
-            //animation rotation
-            if  (velocity.x > 0f){
-                transform.eulerAngles = Vector3.zero;
-            } else if (velocity.x < 0f){
-                transform.eulerAngles = new Vector3(0f, 180f, 0f);
-            }
-
-        
+        //animation rotation
+        if (velocity.x > 0f)
+        {
+            naruto.eulerAngles = Vector3.zero;
+            kuyobi.eulerAngles = Vector3.zero;
+            
+            // Update the player direction
+            player.UpdateFacingDirection(true);
+            
+        } 
+        else if (velocity.x < 0f) 
+        {
+            naruto.eulerAngles = new Vector3(0f, 180f, 0f);
+            kuyobi.eulerAngles = new Vector3(0f, 180f, 0f);
+            
+            // Update the player direction
+            player.UpdateFacingDirection(false);
+        }
     }
 
     private void GroundedMovement()
@@ -72,14 +89,14 @@ public class PlayerMovments : MonoBehaviour
         {
             velocity.y = JumpForce;
             Jumping = true;
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.jump);
         }
     }
 
     private void ApplyGravity()
     {
-        bool Falling = velocity.y < 0f || !Input.GetButtonDown("Jump");
-        float Multiplier = Falling ? 2f : 1f;
-        velocity.y += Gravity * Multiplier * Time.deltaTime;
+        
+        velocity.y += Gravity *  Time.deltaTime;
         velocity.y = Mathf.Max(velocity.y, Gravity / 2f);
     }
 
@@ -97,7 +114,15 @@ public class PlayerMovments : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            if (transform.DotTest(collision.transform, Vector2.down))
+            {
+                velocity.y = JumpForce * (3/2);
+                Jumping = true;
+            }
+        }
+        else if (collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
         {
             if (transform.DotTest(collision.transform, Vector2.up))
             {
@@ -105,6 +130,26 @@ public class PlayerMovments : MonoBehaviour
             }
         }
     }
+
+    #if UNITY_EDITOR
+public void TestFlip(float simulatedInput)
+{
+    // bypass Input.GetAxis
+    velocity.x = Mathf.MoveTowards(0, simulatedInput * MovementSpeed, MovementSpeed * Time.deltaTime) / 1.5f;
+
+    if (velocity.x > 0f)
+    {
+        naruto.eulerAngles = Vector3.zero;
+        kuyobi.eulerAngles = Vector3.zero;
+    }
+    else if (velocity.x < 0f)
+    {
+        naruto.eulerAngles = new Vector3(0f, 180f, 0f);
+        kuyobi.eulerAngles = new Vector3(0f, 180f, 0f);
+    }
+}
+#endif
+
 }
 
 //Filip

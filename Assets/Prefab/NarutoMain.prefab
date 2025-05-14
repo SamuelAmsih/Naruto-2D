@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3314656033902836237}
   m_Layer: 3
   m_Name: Kuyobi
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4443711331815193548}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44, y: 0.58, z: 0}
+  m_LocalPosition: {x: -1.018, y: 0.92, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -5002861948462300610, guid: ba6bc7cc7e15642ec8bdbcedf6847de6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce8b71775820f3e4bb403d29ef719ea5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,20 +102,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdleFrames:
-  - {fileID: -1420256901096998040, guid: aa7eef1ee1e594fe08e4b240bc88b2dc, type: 3}
-  IdleFps: 1
+  - {fileID: 21300000, guid: ce8b71775820f3e4bb403d29ef719ea5, type: 3}
+  - {fileID: 21300000, guid: 5f4b93adedb63f44c899cce7dac3a2ad, type: 3}
+  - {fileID: 21300000, guid: d72fd5e05131b1b43ab4465ba9cdb417, type: 3}
+  - {fileID: 21300000, guid: 4434b02777b1e634f87a933c00673345, type: 3}
+  - {fileID: 21300000, guid: e55143ff77c8e1148af9c2c1b7a0b078, type: 3}
+  - {fileID: 21300000, guid: b51c1a78a7cde284f8bcaa151135ad6c, type: 3}
+  IdleFps: 6
   RunFrames:
-  - {fileID: 8815195490453937080, guid: 5621629bd200d4714bfd78e2c9beb76e, type: 3}
-  - {fileID: 6624304071437449784, guid: 70b5d1b23c20241658a50b68317774c5, type: 3}
-  - {fileID: -7868319451618232489, guid: 5280b926a54c6478594814d52714c648, type: 3}
-  - {fileID: 324017837584558801, guid: 27eea2e6d47ca435d841e572ebc8364c, type: 3}
-  - {fileID: -7444382815865144535, guid: 6ad542050c7864ec0abcef3e927285a2, type: 3}
-  - {fileID: 4540451949022931499, guid: 0eb255372e0654e179ef14cc4ee62a3b, type: 3}
+  - {fileID: 21300000, guid: 542b7c532ce80564c87ec70ee3dac81b, type: 3}
+  - {fileID: 21300000, guid: d29ddd7de765ab847a627dd8ebb25835, type: 3}
+  - {fileID: 21300000, guid: a77e9ec6fec9aaa4c95b8d3c19f99212, type: 3}
+  - {fileID: 21300000, guid: 2809b3c7d5cdc4148bfb349057d5911c, type: 3}
+  - {fileID: 21300000, guid: 991fb7072d7158143a11883cac5941b2, type: 3}
+  - {fileID: 21300000, guid: 00867d53bd5deab4a836df3c1bb696c3, type: 3}
   RunFps: 10
   JumpFrames:
   - {fileID: 847684918645523156, guid: d8ce1fef231d449acae17b8a7eb82720, type: 3}
-  - {fileID: -7444382815865144535, guid: 6ad542050c7864ec0abcef3e927285a2, type: 3}
-  JumpFps: 4
+  - {fileID: 21300000, guid: 991fb7072d7158143a11883cac5941b2, type: 3}
+  JumpFps: 3
+  DeadFrames: []
+  DeadFps: 5
+  RasenganFrames: []
+  RasenganFps: 20
+  WinFrames: []
+  WinFps: 4
 --- !u!114 &3314656033902836237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +150,9 @@ GameObject:
   - component: {fileID: 2281716853481756406}
   - component: {fileID: 4099920280997760362}
   - component: {fileID: 4172061487278827773}
+  - component: {fileID: 3884130640655156293}
   - component: {fileID: 9040537414537851877}
+  - component: {fileID: -7049900348635795573}
   m_Layer: 3
   m_Name: NarutoMain
   m_TagString: Player
@@ -180,7 +193,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: e0dc92939b2f8420ba4f083bff529cf3, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -225,9 +238,25 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.5, y: 0.51}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: -0.45, y: 0.55}
+  m_Size: {x: 0.7, y: 0.9}
   m_Direction: 0
+--- !u!114 &3884130640655156293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581520568336205341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5e8e213f06f314a845294aca2f1118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallRenderer: {fileID: 7746561830279732047}
+  bigRenderer: {fileID: 74900043244857601}
+  invincibilityDuration: 2
+  blinkRate: 0.1
 --- !u!114 &9040537414537851877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,9 +269,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba88b0076c8340149cdb05460cd0315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 8
-  MaxJumpHeight: 5
-  MaxJumpTime: 1
+  MovementSpeed: 7
+  MaxJumpHeight: 5.5
+  MaxJumpTime: 1.2
+  kuyobi: {fileID: 6833893055121900385}
+  naruto: {fileID: 5506698722701275232}
+--- !u!114 &-7049900348635795573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581520568336205341}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07953ba6593bd7948af7bd4660cce083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 3967131349975545363}
+  deadSprite: {fileID: 8433475746572086837, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
 --- !u!1 &7249109355962557097
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +302,7 @@ GameObject:
   - component: {fileID: 4785551562314476784}
   m_Layer: 3
   m_Name: Naruto
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,12 +366,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -5132616945758128257, guid: 82af97bce492c1140bbc8528987d83ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aaaa486c3bfddef44aea48ac9978b306, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.65}
+  m_Size: {x: 0.65, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -339,33 +384,90 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7249109355962557097}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 489d5c913d315499fb8e798ca5d56e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IdleFrames:
-  - {fileID: 21300000, guid: 5cfb6ae4bc8054058b063754879649c3, type: 3}
-  - {fileID: 21300000, guid: d1fca3268fc07476698d20e56fc4081a, type: 3}
-  - {fileID: 21300000, guid: 93f6106a85e4d4e3a8e7b21a56516d64, type: 3}
-  - {fileID: 21300000, guid: 91a27cdd98e904d5a9d3fcc0cc796a32, type: 3}
-  - {fileID: 21300000, guid: 532125004a4ff4bb8af7249941c13de5, type: 3}
-  - {fileID: 21300000, guid: 4d304faea451c4278bf106c5940281e7, type: 3}
-  - {fileID: 21300000, guid: 5cfb6ae4bc8054058b063754879649c3, type: 3}
-  IdleFps: 4
+  - {fileID: 21300000, guid: aaaa486c3bfddef44aea48ac9978b306, type: 3}
+  - {fileID: 21300000, guid: 7b4a776210d3c0f4a96b69248df442e2, type: 3}
+  - {fileID: 21300000, guid: a93a8eba06b6fdf4190e12e2636ffba5, type: 3}
+  - {fileID: 21300000, guid: aa1df78ecad63b5449b92618d55497a1, type: 3}
+  - {fileID: 21300000, guid: be39b3f2b9fafcc46b2654f3d4673ae6, type: 3}
+  - {fileID: 21300000, guid: c22f102b1ec213548bfa5e715051b21a, type: 3}
+  - {fileID: 21300000, guid: 5f812ca4cac370f42a783106e11b9a48, type: 3}
+  - {fileID: 21300000, guid: 624ea475a8c4dd041a857f280efa1348, type: 3}
+  - {fileID: 21300000, guid: 338e9f4f4af544a40ac5e76ee837b47f, type: 3}
+  - {fileID: 21300000, guid: fb49a924d3a516044a3476cef17e037f, type: 3}
+  - {fileID: 21300000, guid: 5f812ca4cac370f42a783106e11b9a48, type: 3}
+  - {fileID: 21300000, guid: 624ea475a8c4dd041a857f280efa1348, type: 3}
+  - {fileID: 21300000, guid: 338e9f4f4af544a40ac5e76ee837b47f, type: 3}
+  - {fileID: 21300000, guid: fb49a924d3a516044a3476cef17e037f, type: 3}
+  - {fileID: 21300000, guid: 5f812ca4cac370f42a783106e11b9a48, type: 3}
+  - {fileID: 21300000, guid: 624ea475a8c4dd041a857f280efa1348, type: 3}
+  - {fileID: 21300000, guid: 338e9f4f4af544a40ac5e76ee837b47f, type: 3}
+  - {fileID: 21300000, guid: fb49a924d3a516044a3476cef17e037f, type: 3}
+  - {fileID: 21300000, guid: c22f102b1ec213548bfa5e715051b21a, type: 3}
+  IdleFps: 6
   RunFrames:
-  - {fileID: 1380614546134671771, guid: 4290be204071c4f39b7b9bededded704, type: 3}
-  - {fileID: -7683728373595443933, guid: 52dc92e7febd54a078ef3046a95d3fac, type: 3}
-  - {fileID: 2015781034314652990, guid: 4a9580dcb53c7463bb01f99e6a15ac12, type: 3}
-  - {fileID: 2792781328842556156, guid: ceb74035932fd41ccb9c3b15dddfc67a, type: 3}
-  - {fileID: 2631684450310441164, guid: 6fbefa455928147babc7ebe5d14104f5, type: 3}
-  - {fileID: -3332569268298744291, guid: bcdedb42fd8ea49999d99db22ffb7853, type: 3}
+  - {fileID: 21300000, guid: e2e8916423a681e429608a6a371ede39, type: 3}
+  - {fileID: 21300000, guid: b17a8bd3cc86bb8419fe5cfd4e8ece41, type: 3}
+  - {fileID: 21300000, guid: bae5af567e6b14346bf7a49dc27d03f1, type: 3}
+  - {fileID: 21300000, guid: b7bc9e34f21217e4aaa03e9db954f95e, type: 3}
+  - {fileID: 21300000, guid: 60b1dbb56508bd340858b7e1ec2e354a, type: 3}
+  - {fileID: 21300000, guid: 71a258d79469e3c47894dd9428259182, type: 3}
   RunFps: 10
   JumpFrames:
-  - {fileID: -3089060716620396591, guid: 9b3ffb13564bd46a4a20e617566afebc, type: 3}
   - {fileID: -6398148325348464729, guid: 4f04874058eb04e079a2eb19adfe1ad0, type: 3}
   - {fileID: -7868867820781590053, guid: 5fe862d27ad084d7bb167b34423272df, type: 3}
   JumpFps: 3
+  DeadFrames:
+  - {fileID: 2455366088338920620, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
+  - {fileID: -4441604535275347869, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
+  - {fileID: 8433475746572086837, guid: 0873df374e8907249b860c16de1a90c1, type: 3}
+  DeadFps: 1
+  RasenganFrames:
+  - {fileID: -3266072912212075359, guid: c7ccd6a6ab34a4590bb82d031c2e3d56, type: 3}
+  - {fileID: -6547816274184379497, guid: d3f07b9d31e79444e925abf5084bb4f0, type: 3}
+  - {fileID: 6625358012177708520, guid: 0aa600005dc54487ea60c1060bd6b39c, type: 3}
+  - {fileID: -8986767491963663074, guid: 844adf51dacad42789a2a38863a03388, type: 3}
+  - {fileID: 5850072944528785679, guid: 950f433006a874c299c2397aa626829a, type: 3}
+  - {fileID: -1475176815703401927, guid: cbc81c429363b4a22b21e6baac4ddc16, type: 3}
+  - {fileID: -174278486560493630, guid: 10c765d75da834ae490f557eeda53608, type: 3}
+  - {fileID: 3058737248901666511, guid: 85f876c5cf9c141f0bfd273412f9cb10, type: 3}
+  - {fileID: 3058737248901666511, guid: 85f876c5cf9c141f0bfd273412f9cb10, type: 3}
+  - {fileID: -8450524385370751768, guid: 68968bad6c3064becac2f9c6c55768f7, type: 3}
+  - {fileID: 2579399318538245459, guid: 995491daa2a2443e0969f0c117cadc9e, type: 3}
+  - {fileID: 2018987174224956405, guid: 9684adedc94ab47dca114dcd825da5bc, type: 3}
+  - {fileID: -8450524385370751768, guid: 68968bad6c3064becac2f9c6c55768f7, type: 3}
+  - {fileID: 2579399318538245459, guid: 995491daa2a2443e0969f0c117cadc9e, type: 3}
+  - {fileID: 2018987174224956405, guid: 9684adedc94ab47dca114dcd825da5bc, type: 3}
+  - {fileID: -8450524385370751768, guid: 68968bad6c3064becac2f9c6c55768f7, type: 3}
+  - {fileID: 2579399318538245459, guid: 995491daa2a2443e0969f0c117cadc9e, type: 3}
+  - {fileID: 2018987174224956405, guid: 9684adedc94ab47dca114dcd825da5bc, type: 3}
+  - {fileID: -8450524385370751768, guid: 68968bad6c3064becac2f9c6c55768f7, type: 3}
+  - {fileID: 2579399318538245459, guid: 995491daa2a2443e0969f0c117cadc9e, type: 3}
+  - {fileID: 2018987174224956405, guid: 9684adedc94ab47dca114dcd825da5bc, type: 3}
+  - {fileID: -3829718989423776163, guid: 1b98fdbda31db434a80f64bffeb8cebf, type: 3}
+  - {fileID: 5800635757194009474, guid: e3ae82f383f5a47d7ac850b605ecc512, type: 3}
+  - {fileID: -8385157506249284216, guid: 38888c9067a6c4b0dbbd2e44a874097d, type: 3}
+  - {fileID: 8054970022521074246, guid: d756eec47749542da97b3c15b63c49a2, type: 3}
+  - {fileID: -3231211412085102265, guid: aaafe2a1bd2e741e89ee856ec4104831, type: 3}
+  - {fileID: 5966945357251081347, guid: 9d17afd9211224209954f87e1210d777, type: 3}
+  - {fileID: -5119024785003859942, guid: fb0eb92e292564a5885ca55764a61d02, type: 3}
+  - {fileID: -6727929075843607045, guid: 85a61438ac83d405b95b058e6cc0d6e8, type: 3}
+  - {fileID: -6727929075843607045, guid: 85a61438ac83d405b95b058e6cc0d6e8, type: 3}
+  - {fileID: -6727929075843607045, guid: 85a61438ac83d405b95b058e6cc0d6e8, type: 3}
+  - {fileID: -6727929075843607045, guid: 85a61438ac83d405b95b058e6cc0d6e8, type: 3}
+  RasenganFps: 8
+  WinFrames:
+  - {fileID: 4036952479103918717, guid: bec3dcd9157ec4f718358fffd1ebb78e, type: 3}
+  - {fileID: -4452926609803270758, guid: 27983964f02274937b5255e5252972f7, type: 3}
+  - {fileID: -2713797474961252724, guid: 2f0d0265facae45f78fd1a360c8a3c08, type: 3}
+  - {fileID: -4452926609803270758, guid: 27983964f02274937b5255e5252972f7, type: 3}
+  - {fileID: -2713797474961252724, guid: 2f0d0265facae45f78fd1a360c8a3c08, type: 3}
+  WinFps: 2
 --- !u!114 &4785551562314476784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,7 +475,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7249109355962557097}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db401c826020745108c3d58ca32a8e8f, type: 3}
   m_Name: 

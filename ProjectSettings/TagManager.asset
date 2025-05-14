@@ -13,7 +13,7 @@ TagManager:
   - UI
   - PowerUp
   - Enemy
-  - 
+  - LevelComplete
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Enemies
     uniqueID: 2893539311
+    locked: 0
+  - name: LevelComplete
+    uniqueID: 2095012993
     locked: 0
   - name: Naruto
     uniqueID: 3040494591
