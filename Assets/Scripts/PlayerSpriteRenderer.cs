@@ -20,8 +20,10 @@ public class PlayerSpriteRenderer : MonoBehaviour
     public float   DeadFps = 5f;
     public Sprite[] RasenganFrames;
     public float RasenganFps = 20f;
+    public Sprite[] WinFrames;
+    public float WinFps = 4f;
 
-    private enum State { Idle, Run, Jump, Dead , Rasengan }
+    private enum State { Idle, Run, Jump, Dead , Rasengan, Win }
     private State currentState;
 
     private void Awake()
@@ -45,7 +47,7 @@ public class PlayerSpriteRenderer : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (currentState == State.Dead || currentState == State.Rasengan) return;
+        if (currentState == State.Dead || currentState == State.Rasengan || currentState == State.Win) return;
 
       
         State newState = mov.Jumping
@@ -77,12 +79,17 @@ public class PlayerSpriteRenderer : MonoBehaviour
 
     // Add a method to your PlayerSpriteRenderer class to handle blinking
     public IEnumerator Blink(float duration, float blinkRate)
+{
+    SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+    if (spriteRenderer == null) yield break;
+    
+    // Store the original color
+    Color originalColor = spriteRenderer.color;
+    
+    float endTime = Time.time + duration;
+    
+    try
     {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null) yield break;
-        
-        float endTime = Time.time + duration;
-        
         while (Time.time < endTime)
         {
             // Toggle alpha between half and full
@@ -92,12 +99,19 @@ public class PlayerSpriteRenderer : MonoBehaviour
             
             yield return new WaitForSeconds(blinkRate);
         }
-        
-        // Ensure full opacity at the end
-        Color finalColor = spriteRenderer.color;
-        finalColor.a = 1f;
-        spriteRenderer.color = finalColor;
     }
+    finally
+    {
+        // Always ensure the sprite is fully visible at the end
+        // Even if the coroutine is stopped prematurely
+        if (spriteRenderer != null)
+        {
+            Color color = spriteRenderer.color;
+            color.a = originalColor.a; // Reset to original alpha
+            spriteRenderer.color = color;
+        }
+    }
+}
 
     public void PlayDeathAnimation()
     {
@@ -142,6 +156,14 @@ public class PlayerSpriteRenderer : MonoBehaviour
     {
         return currentState == State.Rasengan;
     }
+
+    public void PlayWinAnimation()
+    {
+        currentState = State.Win;
+        anim.PlayAnimation(WinFrames, WinFps);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.Win);
+    }
+
 
   
     public void Show()

@@ -32,9 +32,10 @@ public class Enemyninja : MonoBehaviour
 
     private void Flatten()
     {
+        GetComponent<EnemySpriteRenderer>()?.PlayDeathAnimation();
+
         GetComponent<Collider2D>().enabled = false;
         GetComponent<EntityMovement>().enabled = false;
-        GetComponent<SpriteRenderer>().sprite = flatSprite;
         Destroy(gameObject, 0.5f);
     }
 }

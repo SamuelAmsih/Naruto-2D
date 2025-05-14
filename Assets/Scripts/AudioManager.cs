@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip powerdown_1;
     public AudioClip powerdown_1_2;
     public AudioClip powerup;
+    public AudioClip Win;
 
     private void Awake()
     {

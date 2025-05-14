@@ -41,7 +41,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4443711331815193548}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -125,6 +125,8 @@ MonoBehaviour:
   DeadFps: 5
   RasenganFrames: []
   RasenganFps: 20
+  WinFrames: []
+  WinFps: 4
 --- !u!114 &3314656033902836237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +193,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: e0dc92939b2f8420ba4f083bff529cf3, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -253,6 +255,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smallRenderer: {fileID: 7746561830279732047}
   bigRenderer: {fileID: 74900043244857601}
+  invincibilityDuration: 2
+  blinkRate: 0.1
 --- !u!114 &9040537414537851877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +329,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7249109355962557097}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -457,6 +461,13 @@ MonoBehaviour:
   - {fileID: -6727929075843607045, guid: 85a61438ac83d405b95b058e6cc0d6e8, type: 3}
   - {fileID: -6727929075843607045, guid: 85a61438ac83d405b95b058e6cc0d6e8, type: 3}
   RasenganFps: 8
+  WinFrames:
+  - {fileID: 4036952479103918717, guid: bec3dcd9157ec4f718358fffd1ebb78e, type: 3}
+  - {fileID: -4452926609803270758, guid: 27983964f02274937b5255e5252972f7, type: 3}
+  - {fileID: -2713797474961252724, guid: 2f0d0265facae45f78fd1a360c8a3c08, type: 3}
+  - {fileID: -4452926609803270758, guid: 27983964f02274937b5255e5252972f7, type: 3}
+  - {fileID: -2713797474961252724, guid: 2f0d0265facae45f78fd1a360c8a3c08, type: 3}
+  WinFps: 2
 --- !u!114 &4785551562314476784
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,9 +18,19 @@ public class LevelComplete : MonoBehaviour
     
     private IEnumerator LevelCompletesequence(Transform player)
     {
-        player.GetComponent<PlayerMovments>().enabled = false;
-        player.gameObject.SetActive(false);
+        // Inaktivera rörelse
+        var movement = player.GetComponent<PlayerMovments>();
+        if (movement != null)
+            movement.enabled = false;
+
+        // Spela win-animation
+        var sprite = player.GetComponent<Player>().activeRenderer;
+            if (sprite != null)
+            sprite.PlayWinAnimation();
+
+        // Vänta och ladda nästa nivå
         yield return new WaitForSeconds(2f);
         GameManager.Instance.LoadLevel(nextWorld, nextStage);
     }
+
 }

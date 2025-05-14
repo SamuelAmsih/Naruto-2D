@@ -98,48 +98,60 @@ public void Hit()
 // Add this coroutine to handle invincibility
 // Modify this coroutine to handle invincibility
     private IEnumerator InvincibilityRoutine()
+{
+    isInvincible = true;
+    
+    // Get reference to sprite renderer
+    SpriteRenderer spriteRenderer = smallRenderer.GetComponent<SpriteRenderer>();
+    if (spriteRenderer == null)
     {
-        isInvincible = true;
-        
-        // Get reference to sprite renderer
-        SpriteRenderer spriteRenderer = smallRenderer.GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null)
-        {
-            // If the SpriteRenderer isn't directly on smallRenderer, try to find it in children
-            spriteRenderer = smallRenderer.GetComponentInChildren<SpriteRenderer>();
-        }
-        
-        // Blink the sprite during invincibility period
-        float invincibilityEndTime = Time.time + invincibilityDuration;
-        
-        if (spriteRenderer != null)
-        {
-            // Store original color
-            Color originalColor = spriteRenderer.color;
-            
-            // Blink by changing alpha
-            while (Time.time < invincibilityEndTime)
-            {
-                // Toggle alpha between half and full
-                Color tempColor = spriteRenderer.color;
-                tempColor.a = tempColor.a > 0.5f ? 0.3f : 1f;
-                spriteRenderer.color = tempColor;
-                
-                yield return new WaitForSeconds(blinkRate);
-            }
-            
-            // Restore original color
-            spriteRenderer.color = originalColor;
-        }
-        else
-        {
-            // Fallback if sprite renderer not found - just wait
-            yield return new WaitForSeconds(invincibilityDuration);
-        }
-        
-        isInvincible = false;
-        Debug.Log("Invincibility ended");
+        // If the SpriteRenderer isn't directly on smallRenderer, try to find it in children
+        spriteRenderer = smallRenderer.GetComponentInChildren<SpriteRenderer>();
     }
+    
+    // Store original color for later restoration
+    Color originalColor = Color.white;
+    if (spriteRenderer != null)
+    {
+        originalColor = spriteRenderer.color;
+    }
+    
+    // Blink the sprite during invincibility period
+    float invincibilityEndTime = Time.time + invincibilityDuration;
+    
+    if (spriteRenderer != null)
+    {
+        // Blink by changing alpha
+        while (Time.time < invincibilityEndTime)
+        {
+            // Toggle alpha between half and full
+            Color tempColor = spriteRenderer.color;
+            tempColor.a = tempColor.a > 0.5f ? 0.3f : 1f;
+            spriteRenderer.color = tempColor;
+            
+            yield return new WaitForSeconds(blinkRate);
+        }
+        
+        // Explicitly restore original color
+        spriteRenderer.color = originalColor;
+    }
+    else
+    {
+        // Fallback if sprite renderer not found - just wait
+        yield return new WaitForSeconds(invincibilityDuration);
+    }
+    
+    isInvincible = false;
+    Debug.Log("Invincibility ended");
+    
+    // Double-check that the sprite is fully visible
+    if (spriteRenderer != null)
+    {
+        Color finalColor = spriteRenderer.color;
+        finalColor.a = 1f; // Force full opacity
+        spriteRenderer.color = finalColor;
+    }
+}
 
     private void Death()
     {
