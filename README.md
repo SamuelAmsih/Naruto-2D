@@ -20,7 +20,8 @@ Main character <br>
 Enemies <br>
 Obstacles <br>
 Animations <br>
-Retro pixel art, (hopefully sound effects if there is time)
+Retro pixel art <br> 
+Music and ound effects <br>
 
 
 ## Features
