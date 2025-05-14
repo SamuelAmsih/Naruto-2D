@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2025-05-14_14-37-04" tag="">
+  <assembly name="Scripts">
+    <class name="AnimatedSprite" coveredlines="0" coverablelines="17" totallines="40" coveredbranches="0" totalbranches="0" />
+    <class name="AudioManager" coveredlines="0" coverablelines="19" totallines="74" coveredbranches="0" totalbranches="0" />
+    <class name="BoxHit" coveredlines="0" coverablelines="26" totallines="72" coveredbranches="0" totalbranches="0" />
+    <class name="BoxItem" coveredlines="0" coverablelines="26" totallines="45" coveredbranches="0" totalbranches="0" />
+    <class name="BoxScroll" coveredlines="0" coverablelines="17" totallines="46" coveredbranches="0" totalbranches="0" />
+    <class name="DeathAnimation" coveredlines="0" coverablelines="35" totallines="79" coveredbranches="0" totalbranches="0" />
+    <class name="DeathhBarrier" coveredlines="0" coverablelines="5" totallines="15" coveredbranches="0" totalbranches="0" />
+    <class name="Enemyninja" coveredlines="0" coverablelines="18" totallines="41" coveredbranches="0" totalbranches="0" />
+    <class name="EnemySpriteRenderer" coveredlines="0" coverablelines="18" totallines="53" coveredbranches="0" totalbranches="0" />
+    <class name="EntityMovement" coveredlines="0" coverablelines="39" totallines="105" coveredbranches="0" totalbranches="0" />
+    <class name="Extensions" coveredlines="0" coverablelines="23" totallines="49" coveredbranches="0" totalbranches="0" />
+    <class name="GameManager" coveredlines="0" coverablelines="61" totallines="176" coveredbranches="0" totalbranches="0" />
+    <class name="LevelComplete" coveredlines="0" coverablelines="14" totallines="36" coveredbranches="0" totalbranches="0" />
+    <class name="Player" coveredlines="0" coverablelines="134" totallines="339" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerMovments" coveredlines="4" coverablelines="68" totallines="155" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerSpriteRenderer" coveredlines="0" coverablelines="77" totallines="182" coveredbranches="0" totalbranches="0" />
+    <class name="PowerUp" coveredlines="0" coverablelines="9" totallines="38" coveredbranches="0" totalbranches="0" />
+    <class name="SideScrolling" coveredlines="0" coverablelines="6" totallines="20" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Tests">
+    <class name="AudioManagerTests" coveredlines="0" coverablelines="22" totallines="67" coveredbranches="0" totalbranches="0" />
+    <class name="GameManagerTests" coveredlines="0" coverablelines="56" totallines="163" coveredbranches="0" totalbranches="0" />
+    <class name="PerfTest.BoxHitExtensions" coveredlines="0" coverablelines="3" totallines="51" coveredbranches="0" totalbranches="0" />
+    <class name="PerfTest.BoxHitPerformanceTests" coveredlines="0" coverablelines="9" totallines="51" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerMovements_HorizontalFlipTest" coveredlines="0" coverablelines="9" totallines="22" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerMovements_RunningTest" coveredlines="0" coverablelines="7" totallines="16" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.BoxHitTest" coveredlines="0" coverablelines="25" totallines="83" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.ExtensionsDotTest" coveredlines="0" coverablelines="14" totallines="38" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.PlayerGravityTests" coveredlines="10" coverablelines="11" totallines="43" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.PlayerJumpForceTests" coveredlines="0" coverablelines="11" totallines="45" coveredbranches="0" totalbranches="0" />
+    <class name="Tests.PlayerSpriteRendererVisibilityTests" coveredlines="0" coverablelines="23" totallines="62" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>
