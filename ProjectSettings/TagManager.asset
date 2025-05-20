@@ -44,17 +44,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 769815209
+    locked: 0
   - name: Enemies
     uniqueID: 2893539311
-    locked: 0
-  - name: LevelComplete
-    uniqueID: 2095012993
     locked: 0
   - name: Naruto
     uniqueID: 3040494591
     locked: 0
-  - name: Ground
-    uniqueID: 769815209
+  - name: LevelComplete
+    uniqueID: 2095012993
     locked: 0
   m_RenderingLayers:
   - Default
