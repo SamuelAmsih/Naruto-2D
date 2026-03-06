@@ -46,6 +46,15 @@ Unity
 
 https://github.com/users/SamuelAmsih/projects/2/views/1?system_template=kanban <br>
 
+## Install the game:
+
+ 1. Click on "Releases" on the startpage.  <br>
+
+ 2. Download the "Naruto-2D" zip file. <br>
+
+ 3. Unzip the installed file. <br>
+
+ 4. Run the application and enjoy the game! <br>
 
 ## Instructions to run the project locally
 
